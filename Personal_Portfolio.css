@@ -890,8 +890,31 @@ section {
     font-size: 1.4rem;
   }
 
-  .contact .row .content,
+  .contact .row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact .row form,
+  .contact .row .content {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   .contact .row form {
-    padding: 2rem 1.5rem;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  .contact .row .content {
+    margin-bottom: 1rem;
+  }
+
+  .contact .row .content a {
+    font-size: 1.4rem;
+    word-break: break-all;
   }
 }
+
