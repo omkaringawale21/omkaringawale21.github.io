@@ -43,11 +43,12 @@
     const downloadBtn = document.getElementById("downloadResume");
     if(downloadBtn) {
       downloadBtn.addEventListener("click", () => {
-        const link = document.createElement("a");
-        link.href = "Omkar_Ingawale_Resume.pdf";
-        link.download = "Omkar_Ingawale_Resume.pdf";
-        link.click();
-        window.open("Omkar_Ingawale_Resume.pdf", "_blank");
+        // const link = document.createElement("a");
+        // link.href = "Omkar_Ingawale_Resume.pdf";
+        // link.download = "Omkar_Ingawale_Resume.pdf";
+        // link.click();
+        // window.open("Omkar_Ingawale_Resume.pdf", "_blank");
+         window.open("./Resume.html", "_blank");
       });
     }
   });
