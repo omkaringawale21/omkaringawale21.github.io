@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omkar Ingawale - Resume</title>
+  <title>Omkar Ingawale - Full Stack Developer Resume</title>
+  <!-- Font Awesome (for icons used in both panels) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -23,7 +25,7 @@
 
     /* Resume Paper */
     .resume {
-      max-width: 1100px;
+      max-width: 1200px;
       width: 100%;
       background: white;
       box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
@@ -144,7 +146,7 @@
       margin-bottom: 1rem;
     }
     .header-name h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: -0.5px;
@@ -201,6 +203,7 @@
     .company {
       font-weight: 600;
       color: #475569;
+      margin-top: 2px;
     }
     .date {
       font-size: 0.75rem;
@@ -208,6 +211,7 @@
       background: #fef9e6;
       padding: 2px 8px;
       border-radius: 20px;
+      font-weight: 500;
     }
     .job ul, .project-item ul {
       margin-left: 1.2rem;
@@ -219,7 +223,17 @@
       margin: 0.35rem 0;
       line-height: 1.4;
     }
-
+    .tech-badge-mini {
+      display: inline-block;
+      background: #eef2ff;
+      color: #0f172a;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      margin-top: 5px;
+      font-weight: 500;
+    }
     .project-item strong {
       color: #0f172a;
     }
@@ -267,14 +281,14 @@
 <body>
 <div class="resume">
   <div class="resume-inner">
-    <!-- LEFT COLUMN (Contact, Skills, Tech) -->
+    <!-- LEFT COLUMN (Contact, Skills, Tech, Certifications) -->
     <div class="left-panel">
       <div class="profile-img">
         <img src="https://placehold.co/400x400/1e293b/f5c518?text=OMKAR" alt="Omkar Ingawale">
       </div>
       <div class="contact-info">
         <h2>CONTACT</h2>
-        <p><i class="fas fa-phone"></i> +91 8484015599</p>
+        <p><i class="fas fa-phone"></i> +91 8484015599 / 9075772072</p>
         <p><i class="fas fa-envelope"></i> omkaringawale21@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Pune, India</p>
         <p><i class="fab fa-linkedin"></i> <a href="#">linkedin.com/in/omkar-ingawale</a></p>
@@ -286,8 +300,9 @@
       <div class="skill-item"><div class="skill-title">React / Next.js</div><div class="skill-bar"><span style="width:88%"></span></div></div>
       <div class="skill-item"><div class="skill-title">Node.js / Express</div><div class="skill-bar"><span style="width:85%"></span></div></div>
       <div class="skill-item"><div class="skill-title">PostgreSQL / MongoDB</div><div class="skill-bar"><span style="width:78%"></span></div></div>
-      <div class="skill-item"><div class="skill-title">AWS (S3, EC2, ECS)</div><div class="skill-bar"><span style="width:70%"></span></div></div>
-      <div class="skill-item"><div class="skill-title">Tailwind / Material UI</div><div class="skill-bar"><span style="width:90%"></span></div></div>
+      <div class="skill-item"><div class="skill-title">AWS (S3, EC2, ECS, ECR)</div><div class="skill-bar"><span style="width:70%"></span></div></div>
+      <div class="skill-item"><div class="skill-title">Tailwind / Material UI / Bootstrap</div><div class="skill-bar"><span style="width:90%"></span></div></div>
+      <div class="skill-item"><div class="skill-title">Stripe / Razorpay Integration</div><div class="skill-bar"><span style="width:85%"></span></div></div>
 
       <h2>CERTIFICATIONS</h2>
       <p style="font-size:0.8rem; margin:5px 0">✔ Full Stack Web Dev - Udemy</p>
@@ -298,60 +313,125 @@
     <div class="right-panel">
       <div class="header-name">
         <h1>OMKAR ABHAY INGAWALE</h1>
-        <p>Full Stack Developer</p>
+        <p>Full Stack Developer | 3.5+ Years Experience</p>
       </div>
       <div class="tagline">
-        🔹 3.5 years of experience building scalable web apps with React, Node.js, ASP.NET Core & cloud services. Passionate about clean code, API design, and high-performance UIs.
+        🔹 Full-stack engineer specializing in ASP.NET Core, React, Node.js, and cloud-native architectures. Proven track record in FinTech, real estate, and AI-driven platforms. Expertise in multi-tenancy, payment gateways (Stripe/Razorpay), and scalable API design.
       </div>
 
-      <!-- WORK EXPERIENCE -->
+      <!-- WORK EXPERIENCE (detailed from portfolio) -->
       <div class="section">
         <h3><i class="fas fa-briefcase"></i> WORK EXPERIENCE</h3>
         
+        <!-- Agile Soft System Inc - SiteOne Backend -->
         <div class="job">
-          <div class="job-header"><span class="job-title">Software Engineer</span> <span class="date">Apr 2024 – Sept 2025</span></div>
+          <div class="job-header"><span class="job-title">Software Engineer</span> <span class="date">Jan 2024 – Sept 2025</span></div>
           <div class="company">Agile Soft System Inc, Pune</div>
           <ul>
-            <li><strong>SiteOne (Real Estate):</strong> Built REST APIs (ASP.NET Core) with JWT, RBAC, Razorpay, multi-tenancy, AWS S3 file management. React frontend with Context API, custom hooks, caching.</li>
-            <li><strong>Party Track (Invoice & Billing System):</strong> Architected full-stack invoicing module using ASP.NET Core Web API + React. Integrated Stripe payment gateway, JWT authentication, invoice PDF generation, and role-based billing access.</li>
-            <li><strong>Quickbooks Eazyconnect:</strong> Node.js/Express backend syncing invoices from QuickBooks to Monday boards; PostgreSQL database.</li>
-            <li><strong>Innovatix (AI/Church):</strong> Stripe integration, multi-tenancy, Sequelize ORM, AI workflow automation.</li>
+            <li><strong>SiteOne (Real Estate - Backend):</strong> Architected RESTful APIs for property listings, user management (RBAC for Super Admin, Homeowner, Subcontractor) using ASP.NET Core. Integrated Razorpay payment gateway with webhook verification; implemented multi-tenant data isolation via schema-based PostgreSQL separation.</li>
+            <li><strong>JWT & Security:</strong> Designed JWT authentication with refresh token rotation, role-based access control, and managed secure file storage on AWS S3 using pre-signed URLs.</li>
+            <li><strong>Performance:</strong> Optimized SQL queries and LINQ, reducing API response time by 30%; collaborated with frontend teams for seamless contract integration.</li>
+            <div><span class="tech-badge-mini">ASP.NET Core</span><span class="tech-badge-mini">Razorpay</span><span class="tech-badge-mini">JWT</span><span class="tech-badge-mini">PostgreSQL</span><span class="tech-badge-mini">AWS S3</span></div>
           </ul>
         </div>
 
+        <!-- SiteOne React Frontend -->
+        <div class="job">
+          <div class="job-header"><span class="job-title">Software Engineer (Frontend)</span> <span class="date">Jan 2024 – Sept 2025</span></div>
+          <div class="company">Agile Soft System Inc - SiteOne (React)</div>
+          <ul>
+            <li>Built reusable component library using Class + Functional components with Context API for global state, reducing code duplication by 40%.</li>
+            <li>Implemented role-based UI rendering, integrated S3 upload with polling mechanism to track file upload status in real-time.</li>
+            <li>Enhanced performance via lazy loading, code splitting, and memoization; fully responsive design across devices; unit tests with Jest (85% coverage).</li>
+            <div><span class="tech-badge-mini">React</span><span class="tech-badge-mini">Context API</span><span class="tech-badge-mini">SCSS</span><span class="tech-badge-mini">Jest</span></div>
+          </ul>
+        </div>
+
+        <!-- Party Track - Backend (ASP.NET Core + Stripe + Invoicing) -->
+        <div class="job">
+          <div class="job-header"><span class="job-title">Software Engineer (Full Stack)</span> <span class="date">Nov 2024 – Sept 2025</span></div>
+          <div class="company">Agile Soft System Inc - Party Track (Invoice & Billing System)</div>
+          <ul>
+            <li><strong>Invoice & Billing Engine:</strong> Designed RESTful APIs for invoice generation, line-item billing, tax calculations, and PDF export using iTextSharp. Implemented automatic invoice numbering, status tracking (Paid/Pending/Overdue), and advanced filtering.</li>
+            <li><strong>Stripe Integration:</strong> Integrated Stripe Checkout Sessions and Webhooks for one-time payments and subscription billing. Implemented idempotency keys to prevent duplicate charges and built reconciliation jobs for payment verification.</li>
+            <li><strong>Authentication & Audit:</strong> JWT authentication with refresh tokens, role-based access (Admin, Finance, Viewer), BCrypt password hashing, and audit logs for sensitive operations.</li>
+            <li><strong>Backend Excellence:</strong> Dynamic filtering/pagination using LINQ, background services (IHostedService) for overdue invoice reminders via SendGrid, DTOs + AutoMapper, and xUnit/Moq unit tests (80% coverage).</li>
+            <li><strong>React Frontend (Redux RTK):</strong> Developed 20+ reusable components, utilized RTK Query for API caching and optimistic updates (reducing network calls by 35%). Integrated Stripe Elements and real-time invoice dashboard with Chart.js.</li>
+            <div><span class="tech-badge-mini">ASP.NET Core</span><span class="tech-badge-mini">Stripe API</span><span class="tech-badge-mini">JWT</span><span class="tech-badge-mini">PostgreSQL</span><span class="tech-badge-mini">React/Redux</span><span class="tech-badge-mini">xUnit</span></div>
+          </ul>
+        </div>
+
+        <!-- Quickbooks Eazyconnect (Node.js) -->
+        <div class="job">
+          <div class="job-header"><span class="job-title">Software Engineer</span> <span class="date">May 2024 – Apr 2025</span></div>
+          <div class="company">Quickbooks Eazyconnect - Node.js Integration</div>
+          <ul>
+            <li>Built full-stack integration to sync invoices & customers from Intuit QuickBooks to Monday.com boards using OAuth2 flows.</li>
+            <li>Developed REST APIs in Node.js/Express; used PostgreSQL for reliable data storage and scheduled sync jobs (node-cron).</li>
+            <li>Created React dashboard with real-time sync status and conflict resolution UI.</li>
+            <div><span class="tech-badge-mini">Node.js</span><span class="tech-badge-mini">Express</span><span class="tech-badge-mini">OAuth2</span><span class="tech-badge-mini">PostgreSQL</span></div>
+          </ul>
+        </div>
+
+        <!-- Innovatix - AI / Church Platform -->
+        <div class="job">
+          <div class="job-header"><span class="job-title">Software Engineer</span> <span class="date">July 2024 – Nov 2025</span></div>
+          <div class="company">Innovatix - AI / Church Platform</div>
+          <ul>
+            <li>Developed Stripe payment module for recurring donations and one-time payments with webhook handling.</li>
+            <li>Implemented multi-tenancy architecture using Sequelize (PostgreSQL) for isolated church/organization data.</li>
+            <li>Integrated OpenAI API for AI-driven sermon recommendations and automated content workflows; designed CRUD operations with advanced filtering and transaction management.</li>
+            <div><span class="tech-badge-mini">Node.js</span><span class="tech-badge-mini">Stripe</span><span class="tech-badge-mini">Sequelize</span><span class="tech-badge-mini">OpenAI API</span></div>
+          </ul>
+        </div>
+
+        <!-- WWI (World Wide Information) -->
+        <div class="job">
+          <div class="job-header"><span class="job-title">React Developer</span> <span class="date">Jan 2024 – July 2024</span></div>
+          <div class="company">WWI (World Wide Information)</div>
+          <ul>
+            <li>Implemented multi-tenancy UI with role-based access control; built file upload module with S3 direct uploads and polling mechanism to track upload progress.</li>
+            <li>Created custom hooks for data fetching and caching, improving performance by 25%; managed CRUD operations across entities with JWT authentication.</li>
+            <div><span class="tech-badge-mini">React</span><span class="tech-badge-mini">AWS S3</span><span class="tech-badge-mini">RBAC</span><span class="tech-badge-mini">Custom Hooks</span></div>
+          </ul>
+        </div>
+
+        <!-- Technogrowth - Global Invoice Manager -->
         <div class="job">
           <div class="job-header"><span class="job-title">Software Developer</span> <span class="date">Aug 2021 – Dec 2023</span></div>
           <div class="company">Technogrowth Software Solutions, Pune</div>
           <ul>
-            <li><strong>Global Invoice Manager:</strong> Developed REST APIs for multi-country invoicing, tax calculation, Razorpay payment gateway, automated email PDF invoices using ASP.NET Core & C#.</li>
-            <li>Optimized database relationships and improved invoice generation speed by 35%.</li>
+            <li><strong>Global Invoice Manager:</strong> Developed REST APIs for multi-country invoice management, tax calculations, and automated PDF invoice generation using iTextSharp.</li>
+            <li>Integrated Razorpay payment gateway with refund handling and transaction logging; implemented email service (SMTP) to auto-send invoices to customers.</li>
+            <li>Designed relational database schema for customers, invoices, and line items; reduced invoice generation time by 40% through optimized LINQ queries and caching.</li>
+            <div><span class="tech-badge-mini">ASP.NET Core</span><span class="tech-badge-mini">Razorpay</span><span class="tech-badge-mini">LINQ</span><span class="tech-badge-mini">iTextSharp</span></div>
           </ul>
         </div>
       </div>
 
-      <!-- KEY PROJECTS HIGHLIGHT (Backend heavy) -->
+      <!-- KEY PROJECTS HIGHLIGHT (Detailed technical contributions) -->
       <div class="section">
-        <h3><i class="fas fa-code"></i> KEY PROJECTS & CONTRIBUTIONS</h3>
+        <h3><i class="fas fa-code"></i> OTHER KEY PROJECTS & FEATURES</h3>
         <div class="project-item">
-          <strong>🔹 Party Track – Invoice & Billing API (ASP.NET Core)</strong>
+          <strong>🔹 Canteen Admin Panel (React + Context API)</strong>
           <ul>
-            <li>Designed complete invoice lifecycle: create, update, finalize, and auto-numbering.</li>
-            <li>Implemented Stripe Checkout + Webhooks for one-time/subscription billing with idempotency.</li>
-            <li>JWT + refresh token authentication, role-based access (Admin/Finance/Viewer).</li>
-            <li>Swagger documentation, xUnit testing, DTOs, and AutoMapper for clean architecture.</li>
+            <li>Designed token-based authentication with private routes; managed global auth state using Context API.</li>
+            <li>Built dynamic data view with filters (daily/weekly/monthly) and structured tables; integrated Excel export using SheetJS for offline reporting.</li>
+            <li>Optimized data fetching with debounced search and pagination.</li>
           </ul>
         </div>
         <div class="project-item">
-          <strong>🔹 SiteOne – Multi-Tenant Real Estate Platform</strong>
+          <strong>🔹 Multi-Tenancy & RBAC Architecture (SiteOne & Innovatix)</strong>
           <ul>
-            <li>ASP.NET Core RBAC (Super Admin, Homeowner, Subcontractor). Razorpay integration for payments.</li>
-            <li>AWS S3 secure document upload, JWT authentication, PostgreSQL with tenant isolation.</li>
+            <li>Led schema-based multi-tenant isolation in PostgreSQL for real estate & church platforms, ensuring data separation across organizations with minimal performance overhead.</li>
+            <li>Implemented fine-grained role-based UI rendering and backend policy enforcement (Admin, Finance, Viewer, Subcontractor).</li>
           </ul>
         </div>
         <div class="project-item">
-          <strong>🔹 Canteen Admin Panel</strong>
+          <strong>🔹 Payment Gateway Deep Integration (Stripe & Razorpay)</strong>
           <ul>
-            <li>React + Context API, secure login, token auth, daily/weekly/monthly data filters, Excel export.</li>
+            <li>Completed end-to-end payment flows: webhook signature verification, idempotent transaction handling, refund workflows, and subscription lifecycle management.</li>
+            <li>Built reconciliation jobs and automated email notifications for failed payments.</li>
           </ul>
         </div>
       </div>
@@ -363,26 +443,26 @@
         <div>Bharati Vidyapeeth College of Engineering, Kolhapur | 54%</div>
       </div>
 
-      <!-- ADDITIONAL -->
+      <!-- ACHIEVEMENTS & ADDITIONAL -->
       <div class="section">
-        <h3><i class="fas fa-trophy"></i> ACHIEVEMENTS</h3>
+        <h3><i class="fas fa-trophy"></i> ACHIEVEMENTS & RECOGNITION</h3>
         <ul style="margin-left: 1.2rem;">
-          <li>Received second prize in 'Parashot Design' competition.</li>
-          <li>Client appreciations for seamless production releases & demo excellence.</li>
-          <li>Published clean API documentation & implemented Jest/Vitest unit testing for React modules.</li>
+          <li>Received second prize in 'Parashot Design' competition – demonstrated creative problem-solving.</li>
+          <li>Client appreciations for seamless production releases, high-quality API documentation, and live demo excellence.</li>
+          <li>Implemented robust unit testing strategies (Jest/Vitest for React, xUnit for .NET) achieving >80% coverage across critical modules.</li>
         </ul>
       </div>
       <hr>
-      <div style="font-size: 0.7rem; text-align: center; color: #64748b;">📄 References available on request | Open to full-time opportunities</div>
+      <div style="font-size: 0.7rem; text-align: center; color: #64748b;">📄 References available on request | Open to full-time opportunities | Available for immediate joining</div>
     </div>
   </div>
   <div class="print-btn">
-    <button onclick="window.print();"><i class="fas fa-file-pdf"></i> Save as PDF (Print)</button>
+    <button onclick="window.print();"><i class="fas fa-file-pdf"></i> Save as PDF (Print-friendly)</button>
   </div>
 </div>
 
 <script>
-  // ensure PDF prints with optimized margins
+  // Ensure PDF prints with optimized margins and avoid content cut
   window.onbeforeprint = function() {
     document.body.style.margin = '0';
     document.body.style.padding = '0';
