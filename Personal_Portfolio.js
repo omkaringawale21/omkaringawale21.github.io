@@ -1,83 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let homeImg = document.querySelector(".home .home-img");
-  let menuBtn = document.querySelector("#menu-btn");
-  let navbar = document.querySelector(".navbar");
-  let navbarImg = document.querySelector(".navbar-img");
 
-  document.querySelector(".home").onmousemove = (e) => {
-    homeImg.style.top = e.pageY + "px";
-    homeImg.style.left = e.pageX + "px";
-  };
+  (function() { emailjs.init("ybYie7tmzy7N_57V7"); })();
 
-  document.querySelectorAll(".navbar a").forEach((link) => {
-    link.onmouseenter = () => {
-      document.querySelector(".navbar-img img").src =
-        link.getAttribute("data-src");
-    };
-    link.onmouseleave = () => {
-      document.querySelector(".navbar-img img").src = "img1.jpg";
-    };
-  });
-
-  menuBtn.onclick = () => {
-    navbar.classList.toggle("active");
-    navbarImg.classList.toggle("active");
-  };
-
-  document.querySelectorAll(".navbar a").forEach((link) => {
-    link.onclick = () => {
-      navbar.classList.remove("active");
-      navbarImg.classList.remove("active");
-    };
-  });
-
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menu-btn");
+    const navbar = document.querySelector(".navbar");
+    const navbarImg = document.querySelector(".navbar-img");
+    if(menuBtn) menuBtn.onclick = () => { navbar.classList.toggle("active"); navbarImg?.classList.toggle("active"); };
+    document.querySelectorAll(".navbar a").forEach(link => {
+      link.onclick = () => { navbar.classList.remove("active"); navbarImg?.classList.remove("active"); };
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if(target) target.scrollIntoView({ behavior: "smooth" });
       });
     });
-  });
-
-  const contactForm = document.querySelector(".contact form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const now = new Date();
-      const timeString = now.toLocaleString();
-
-      const formData = {
-        name: this.querySelector('[placeholder="Name"]').value,
-        email: this.querySelector('[placeholder="Email"]').value,
-        subject: this.querySelector('[placeholder="Subject"]').value,
-        message: this.querySelector(".message").value,
-        time: timeString,
-      };
-
-      emailjs.send("service_nzxlwge", "template_17v0o3b", formData).then(
-        () => {
-          alert("Thank you for your message!");
-          this.reset();
-        },
-        (error) => {
-          alert("Failed to send: " + error.text);
-        }
-      );
-    });
-  }
-});
-
-document
-  .getElementById("downloadResume")
-  .addEventListener("click", function () {
-    const link = document.createElement("a");
-    link.href = "Omkar_Ingawale_Resume.pdf";
-    link.download = "Omkar_Ingawale_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    window.open("Omkar_Ingawale_Resume.pdf", "_blank");
+    const homeImg = document.querySelector(".home-img");
+    if(homeImg) {
+      document.querySelector(".home").addEventListener("mousemove", (e) => {
+        const x = (e.clientX / window.innerWidth) * 20;
+        const y = (e.clientY / window.innerHeight) * 20;
+        homeImg.style.transform = `translate(${x/6}px, ${y/6}px)`;
+      });
+    }
+    const form = document.getElementById("contactForm");
+    if(form) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const templateParams = {
+          name: document.getElementById("nameInput").value,
+          email: document.getElementById("emailInput").value,
+          subject: document.getElementById("subjectInput").value,
+          message: document.getElementById("msgInput").value,
+          time: new Date().toLocaleString()
+        };
+        emailjs.send("service_nzxlwge", "template_17v0o3b", templateParams)
+          .then(() => { alert("✅ Message sent! I'll reach out soon."); form.reset(); })
+          .catch((err) => { alert("❌ Failed: " + err.text); });
+      });
+    }
+    const downloadBtn = document.getElementById("downloadResume");
+    if(downloadBtn) {
+      downloadBtn.addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.href = "Omkar_Ingawale_Resume.pdf";
+        link.download = "Omkar_Ingawale_Resume.pdf";
+        link.click();
+        window.open("Omkar_Ingawale_Resume.pdf", "_blank");
+      });
+    }
   });

@@ -1,567 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omkar Ingawale - Portfolio</title>
-    <link rel="stylesheet" href="Personal_Portfolio.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Omkar Ingawale | Full Stack Developer Portfolio</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./Personal_Portfolio.css">
+</head>
+<body>
 
-  <body>
-    <!-- Header Section Starts -->
-    <header class="header">
-      <a href="#home" class="logo">PORTFOLIO</a>
-      <div id="menu-btn" class="fa-solid fa-bars"></div>
-    </header>
-    <!-- Header Section Ends -->
+<header class="header">
+  <a href="#home" class="logo">⚡ OMNIKRAFT</a>
+  <div id="menu-btn" class="fa-solid fa-bars"></div>
+</header>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <a href="#home" class="fa-solid fa-house" data-src="img1.jpg">Home</a>
-      <a href="#about" class="fa-solid fa-address-card" data-src="img2.jpg"
-        >About</a
-      >
-      <a href="#experience" class="fa-solid fa-briefcase" data-src="img3.jpg"
-        >Experience</a
-      >
-      <a href="#projects" class="fa-brands fa-github" data-src="img4.jpg"
-        >Projects</a
-      >
-      <a href="#contact" class="fa-solid fa-phone-volume" data-src="img5.jpg"
-        >Contact</a
-      >
-    </nav>
+<nav class="navbar">
+  <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="#about"><i class="fa-solid fa-address-card"></i> About</a>
+  <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
+  <a href="#contact"><i class="fa-solid fa-phone-volume"></i> Contact</a>
+</nav>
+<div class="navbar-img"><img src="https://placehold.co/800x1000/2c3e50/white?text=dev+vision" alt="nav-bg"></div>
 
-    <div class="navbar-img">
-      <img src="img1.jpg" alt="" />
+<!-- HOME -->
+<section class="home" id="home">
+  <div class="home-content">
+    <h3>Hi, my name is</h3>
+    <h3 class="home-text">Omkar Abhay Ingawale</h3>
+    <h3 style="font-size: 1.8rem;">I'm a <span class="highlight">Full Stack Developer</span></h3>
+    <p style="margin-top: 1.5rem; max-width: 500px;">3 years of experience | ASP.NET Core • Node • React | Cloud & scalable systems</p>
+  </div>
+  <img src="https://placehold.co/400x400/0f172a/white?text=OMKAR" class="home-img" alt="Omkar">
+  <div class="wave"></div><div class="wave wave2"></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h1 class="heading" style="color:white">About Me</h1>
+  <div class="about-container">
+    <div class="about-card profile-img"><img src="https://placehold.co/300x300/f5c518/0f172a?text=OI" alt="Omkar"></div>
+    <div class="about-card info">
+      <p><strong>Omkar Abhay Ingawale</strong> <span>: Name</span></p>
+      <p>Full Stack Developer <span>: Role</span></p>
+      <p>Pune, India <span>: Location</span></p>
+      <p>+91 8484015599 <span>: Phone</span></p>
+      <p style="text-transform:lowercase">omkaringawale21@gmail.com <span>: Email</span></p>
+      <p><a href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/" target="_blank" style="color:var(--yellow)">LinkedIn Profile</a> <span>: Social</span></p>
     </div>
+    <div class="about-card">
+      <h3 style="font-size:1.6rem; margin-bottom:1rem;">Profile</h3>
+      <p>Detail-oriented software engineer with 3 years of experience in full-stack development. Expert in building scalable web apps, multi-tenancy architectures, cloud deployment (AWS), and high-performance UI/backend integration. Proven track record in FinTech, real estate, and AI-driven platforms.</p>
+    </div>
+  </div>
 
-    <!-- Home Section Starts -->
-    <section class="home" id="home">
-      <h3>Hi, my name is</h3>
-      <h3 class="home-text">Omkar Abhay Ingawale</h3>
-      <h3>I'm a Full Stack Developer</h3>
-      <img src="OmkarIngawale.jpg" class="home-img" alt="Omkar Ingawale" />
-      <div class="wave"></div>
-      <div class="wave wave-2"></div>
-      <div class="wave wave-3"></div>
-    </section>
-    <!-- Home Section Ends -->
+  <div class="skill-box">
+    <div class="skill-title">📌 Technical Proficiencies</div>
+    <div class="progress"><h3>ASP.NET Core <span>80%</span></h3><div class="bar"><span style="width:80%"></span></div></div>
+    <div class="progress"><h3>HTML5, CSS3, JavaScript <span>90%</span></h3><div class="bar"><span style="width:90%"></span></div></div>
+    <div class="progress"><h3>React JS, Next JS <span>85%</span></h3><div class="bar"><span style="width:85%"></span></div></div>
+    <div class="progress"><h3>Node JS, Express JS <span>80%</span></h3><div class="bar"><span style="width:80%"></span></div></div>
+    <div class="progress"><h3>MongoDB, PostgreSQL <span>75%</span></h3><div class="bar"><span style="width:75%"></span></div></div>
+    <div class="progress"><h3>Material UI / Tailwind / Bootstrap <span>85%</span></h3><div class="bar"><span style="width:85%"></span></div></div>
+    <div class="progress"><h3>AWS (S3, EC2, ECS, ECR) <span>70%</span></h3><div class="bar"><span style="width:70%"></span></div></div>
+  </div>
+</section>
 
-    <!-- About Section Starts -->
-    <section class="about" id="about">
-      <h1 class="heading" style="color: white">About Me</h1>
-      <div class="info-container">
-        <div class="info">
-          <p>Omkar Abhay Ingawale <span>: Name</span></p>
-          <p>Full Stack Developer <span>: Role</span></p>
-          <p>Pune, India <span>: Location</span></p>
-          <p>8484015599 <span>: Phone</span></p>
-          <p>
-            <span style="text-transform: lowercase; color: white"
-              >omkaringawale21@gmail.com</span
-            >
-            <span>: Email</span>
-          </p>
-          <p>
-            <a
-              href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/"
-              target="_blank"
-              style="color: white"
-              >LinkedIn Profile</a
-            >
-            <span>: Social</span>
-          </p>
-        </div>
+<!-- EXPERIENCE - ENRICHED DETAILS -->
+<section class="experience" id="experience">
+  <h1 class="heading">Work Experience</h1>
+  <div class="timeline">
+    <!-- Agile Soft: SiteOne Backend -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Jan 2024 – Sept 2025</span><h3>Software Engineer | Agile Soft System Inc</h3><h4>SiteOne (Real Estate) - Backend</h4><p><strong>ASP.NET Core Web API, Razorpay, JWT, PostgreSQL, Multi-Tenancy, AWS S3</strong></p><ul><li>Architected and maintained RESTful APIs for property listings, user management (RBAC for Super Admin, Homeowner, Subcontractor), and payment integration.</li><li>Integrated Razorpay payment gateway with webhook verification for transaction reliability; implemented multi-tenant data isolation via schema-based separation.</li><li>Designed JWT authentication with refresh token rotation; managed file storage on AWS S3 (pre-signed URLs for secure document uploads).</li><li>Optimized SQL queries reducing API response time by 30%; collaborated with frontend for seamless contract integration.</li></ul><div class="tech-stack"><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">Razorpay</span><span class="tech-badge">JWT</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">AWS S3</span></div></div></div>
+    
+    <!-- SiteOne React Frontend -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Jan 2024 – Sept 2025</span><h3>Software Engineer | Agile Soft System Inc</h3><h4>SiteOne (React Frontend)</h4><ul><li>Built reusable component library (Class + Functional components) with Context API for global state, reducing code duplication by 40%.</li><li>Implemented role-based UI rendering; integrated S3 upload with polling mechanism to track file upload status in real-time.</li><li>Enhanced performance via lazy loading, code splitting, and memoization; delivered fully responsive design across devices.</li><li>Wrote unit tests using Jest & React Testing Library ensuring 85% coverage.</li></ul><div class="tech-stack"><span class="tech-badge">React</span><span class="tech-badge">Context API</span><span class="tech-badge">SCSS</span><span class="tech-badge">Jest</span></div></div></div>
+    
+    <!-- PARTY TRACK - Backend (ASP.NET Core with Stripe & Invoicing) -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Nov 2024 – Sept 2025</span><h3>Software Engineer | Agile Soft System Inc</h3><h4>Party Track (Full-Stack: ASP.NET Core + React)</h4>
+      <p><strong>ASP.NET Core Web API, Stripe, JWT, PostgreSQL, React, Redux Toolkit, AutoMapper</strong></p>
+      <ul>
+        <li><strong>Invoice & Billing Engine:</strong> Designed complete RESTful APIs for invoice generation, line-item billing, tax calculations, and PDF export using iTextSharp. Implemented automatic invoice numbering, status tracking (Paid/Pending/Overdue), and advanced filtering.</li>
+        <li><strong>Authentication & Security:</strong> Built JWT authentication with refresh tokens, role-based access control (Admin, Finance, Viewer), and BCrypt password hashing. Implemented audit logs for sensitive operations.</li>
+        <li><strong>Stripe Integration:</strong> Integrated Stripe Checkout Sessions and Webhooks for one-time payments and subscription billing. Implemented idempotency keys to prevent duplicate charges and built reconciliation jobs for payment verification.</li>
+        <li><strong>Backend Excellence:</strong> Created dynamic filtering, pagination, sorting using LINQ; built background services (IHostedService) for overdue invoice reminders (email alerts via SendGrid). Used DTOs and AutoMapper for clean API contracts.</li>
+        <li><strong>Testing & Docs:</strong> Wrote xUnit & Moq unit tests (80% coverage); documented APIs with Swagger/OpenAPI; ensured GDPR compliance for billing data.</li>
+      </ul>
+      <div class="tech-stack"><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">Stripe API</span><span class="tech-badge">JWT</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">xUnit</span></div>
+    </div></div>
 
-        <div class="image">
-          <img src="OmkarIngawale.jpg" alt="Omkar Ingawale" />
-        </div>
+    <!-- Party Track React Frontend (Redux RTK Query) -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Nov 2024 – Sept 2025</span><h3>Party Track (React Frontend)</h3><h4>React, Tailwind CSS, Redux RTK Query, Stripe Elements</h4><ul><li>Developed 20+ reusable components; utilized RTK Query for API caching, auto-refetching, and optimistic updates reducing network calls by 35%.</li><li>Integrated Stripe Elements for payment UI (card input, payment confirmation) and built real-time invoice dashboard with Chart.js.</li><li>Implemented export to CSV/PDF on frontend; wrote comprehensive unit tests with Jest & React Testing Library.</li><li>Ensured WCAG 2.1 accessibility and fully responsive design across all devices.</li></ul><div class="tech-stack"><span class="tech-badge">React</span><span class="tech-badge">Redux Toolkit</span><span class="tech-badge">Tailwind</span><span class="tech-badge">Stripe Elements</span></div></div></div>
+    
+    <!-- Canteen Admin Panel -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Nov 2024</span><h3>Canteen Admin Panel</h3><h4>React, Context API, SheetJS (Excel Export)</h4><ul><li>Designed token-based authentication with private routes; managed global auth state using Context API.</li><li>Built dynamic data view with filters (daily/weekly/monthly) and structured tables; integrated Excel export using SheetJS for offline reporting.</li><li>Optimized data fetching with debounced search and pagination.</li></ul><div class="tech-stack"><span class="tech-badge">React</span><span class="tech-badge">Context API</span><span class="tech-badge">SheetJS</span></div></div></div>
+    
+    <!-- Quickbooks Eazyconnect -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">May 2024 – Apr 2025</span><h3>Quickbooks Eazyconnect</h3><h4>Node.js, Express, PostgreSQL, React, OAuth2</h4><ul><li>Built full-stack integration to sync invoices & customers from Intuit QuickBooks to Monday.com boards using OAuth2 flows.</li><li>Developed REST APIs in Node.js/Express; used PostgreSQL for reliable data storage and scheduled sync jobs (node-cron).</li><li>Created React dashboard with real-time sync status and conflict resolution UI.</li></ul><div class="tech-stack"><span class="tech-badge">Node.js</span><span class="tech-badge">Express</span><span class="tech-badge">OAuth2</span><span class="tech-badge">PostgreSQL</span></div></div></div>
+    
+    <!-- Innovatix - AI / Church -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">July 2024 – Nov 2025</span><h3>Innovatix - AI / Church Platform</h3><h4>Node.js, Stripe, PostgreSQL, Sequelize, OpenAI API</h4><ul><li>Developed Stripe payment module for recurring donations and one-time payments with webhook handling.</li><li>Implemented multi-tenancy architecture using Sequelize (PostgreSQL) for isolated church/organization data.</li><li>Integrated OpenAI API for AI-driven sermon recommendations and automated content workflows.</li><li>Designed CRUD operations with advanced filtering and transaction management.</li></ul><div class="tech-stack"><span class="tech-badge">Node.js</span><span class="tech-badge">Stripe</span><span class="tech-badge">Sequelize</span><span class="tech-badge">OpenAI</span></div></div></div>
+    
+    <!-- WWI (World Wide Info) -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Jan 2024 – July 2024</span><h3>WWI (World Wide Information)</h3><h4>React, AWS S3, Polling, RBAC, Custom Hooks</h4><ul><li>Implemented multi-tenancy UI with role-based access control; built file upload module with S3 direct uploads and polling mechanism to track upload progress.</li><li>Created custom hooks for data fetching and caching, improving performance by 25%.</li><li>Managed CRUD operations across entities and integrated JWT-based authentication.</li></ul><div class="tech-stack"><span class="tech-badge">React</span><span class="tech-badge">AWS S3</span><span class="tech-badge">RBAC</span></div></div></div>
+    
+    <!-- Technogrowth - Global Invoice Manager -->
+    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Aug 2021 – Dec 2023</span><h3>Software Developer | Technogrowth Software Solutions</h3><h4>Global Invoice Manager - ASP.NET Core, Razorpay, PDF Generation</h4><ul><li>Developed REST APIs for multi-country invoice management, tax calculations, and automated PDF invoice generation (using iTextSharp).</li><li>Integrated Razorpay payment gateway with refund handling and transaction logging.</li><li>Implemented email service (SMTP) to auto-send invoices to customers; designed relational database schema for customers, invoices, and line items.</li><li>Reduced invoice generation time by 40% through optimized LINQ queries and caching.</li></ul><div class="tech-stack"><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">Razorpay</span><span class="tech-badge">LINQ</span><span class="tech-badge">iTextSharp</span></div></div></div>
+  </div>
+</section>
 
-        <div class="info">
-          <h3>Profile</h3>
-          <p>
-            Detail-oriented software engineer with expertise in front-end and
-            full-stack development. Strong foundation in developing dynamic and
-            responsive user interfaces, integrating backend systems, and working
-            with databases. Passionate about learning new technologies with a
-            keen eye for optimizing user experience.
-          </p>
-        </div>
-      </div>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h1 class="heading">Contact Me</h1>
+  <div class="contact-row">
+    <div class="contact-info">
+      <h3 style="font-size:1.6rem; margin-bottom:1rem;">Let's connect</h3>
+      <div class="info-item"><i class="fas fa-envelope"></i> <span style="word-break:break-all;">omkaringawale21@gmail.com</span></div>
+      <div class="info-item"><i class="fas fa-phone"></i> +91 8484015599 / 9075772072</div>
+      <div class="info-item"><i class="fas fa-map-marker-alt"></i> Pune, India</div>
+      <div class="info-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/" target="_blank">linkedin.com/in/omkar-ingawale</a></div>
+      <div class="info-item"><i class="fab fa-github"></i> <a href="https://github.com/omkaringawale21" target="_blank">github.com/omkaringawale21</a></div>
+      <button id="downloadResume" class="download-btn" style="margin-top:1rem;"><i class="fa-solid fa-download"></i> Download CV (PDF)</button>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <input type="text" placeholder="Your Name" class="box" id="nameInput" required>
+      <input type="email" placeholder="Email Address" class="box" id="emailInput" required>
+      <input type="text" placeholder="Subject" class="box" id="subjectInput">
+      <textarea rows="5" placeholder="Your message..." id="msgInput" class="message"></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+    </form>
+  </div>
+</section>
+<footer>
+  <p>© 2025 Omkar Ingawale — Full Stack Developer. Built with 💛</p>
+</footer>
 
-      <div class="skill">
-        <div class="box">
-          <h3 class="title">Technical Skills</h3>
-          <div class="progress progress-1">
-            <h3>HTML5, CSS3, JavaScript <span>90%</span></h3>
-            <div class="bar"><span style="width: 90%"></span></div>
-          </div>
-
-          <div class="progress progress-2">
-            <h3>React JS, Next JS <span>85%</span></h3>
-            <div class="bar"><span style="width: 85%"></span></div>
-          </div>
-
-          <div class="progress progress-3">
-            <h3>Node JS, Express JS <span>80%</span></h3>
-            <div class="bar"><span style="width: 80%"></span></div>
-          </div>
-
-          <div class="progress progress-4">
-            <h3>ASP .NET CORE <span>80%</span></h3>
-            <div class="bar"><span style="width: 80%"></span></div>
-          </div>
-        </div>
-
-        <div class="box">
-          <h3 class="title">Additional Skills</h3>
-          <div class="progress progress-5">
-            <h3>MongoDB, PostgreSQL <span>75%</span></h3>
-            <div class="bar"><span style="width: 75%"></span></div>
-          </div>
-
-          <div class="progress progress-6">
-            <h3>Material UI, Bootstrap, Tailwind CSS <span>85%</span></h3>
-            <div class="bar"><span style="width: 85%"></span></div>
-          </div>
-
-          <div class="progress progress-7">
-            <h3>Git, GitHub, GitLab <span>90%</span></h3>
-            <div class="bar"><span style="width: 90%"></span></div>
-          </div>
-
-          <div class="progress progress-8">
-            <h3>Jira, ESLint, Postman, Jest, Vitest <span>90%</span></h3>
-            <div class="bar"><span style="width: 90%"></span></div>
-          </div>
-
-          <div class="progress progress-9">
-            <h3>AWS Cloud (S3, EC2, ECS, ECR) <span>70%</span></h3>
-            <div class="bar"><span style="width: 70%"></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- About Section Ends -->
-
-    <!-- Experience Section Starts -->
-    <section class="experience" id="experience">
-      <h1 class="heading">Work Experience</h1>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">Apr 2024 - Sept 2025</div>
-          <div class="timeline-content">
-            <h3>Software Engineer | Agile Software, Pune</h3>
-            <h4>Project: SiteOne (Real Estate Project)</h4>
-            <p>
-              <strong>Technologies:</strong> ASP.NET Core Web API, REST APIs, Razorpay,
-              AWS S3, PostgreSQL, JWT, Multi-Tenancy Architecture
-            </p>
-            <ul>
-              <li>
-                Developed and maintained RESTful APIs using ASP.NET Core to
-                support real estate functionalities such as user management,
-                property listing, and payment integration
-              </li>
-              <li>
-                Implemented Role-Based Access Control (RBAC) for Super Admin,
-                Sub-Admin, Homeowner, and Subcontractor roles to ensure secure
-                access
-              </li>
-              <li>
-                Integrated Razorpay payment gateway to handle secure online
-                transactions
-              </li>
-              <li>
-                Architected multi-tenancy support for logical data isolation
-                across different tenants
-              </li>
-              <li>
-                Managed secure file uploads/downloads via AWS S3 for documents
-                and property-related files
-              </li>
-              <li>
-                Applied JWT-based authentication to secure all API endpoints
-              </li>
-              <li>
-                Collaborated with frontend developers to ensure seamless data
-                handling and smooth UI-API integration
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Apr 2024 - Sept 2025</div>
-          <div class="timeline-content">
-            <h3>Software Engineer | Agile Software, Pune</h3>
-            <h4>Project: Siteone (Real Estate Project)</h4>
-            <p>
-              <strong>Technologies:</strong> HTML, CSS, JavaScript, React JS,
-              Context API, class based components
-            </p>
-            <ul>
-              <li>
-                Developed functionality for <strong>multi-tenancy</strong> to
-                support multiple clients within a single application instance
-              </li>
-              <li>
-                Implemented <strong>file uploading</strong> through AWS S3
-                buckets using React.js
-              </li>
-              <li>
-                Managed <strong>CRUD operations</strong> (Create, Read, Update,
-                Delete) across entities
-              </li>
-              <li>
-                Integrated <strong>role-based access control</strong> (RBAC) to
-                ensure secure and permission-based data access
-              </li>
-              <li>
-                Implemented <strong>data caching</strong> strategies to improve
-                application performance
-              </li>
-              <li>
-                Created <strong>custom hooks</strong> for reusable business
-                logic across components
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Nov 2024 - Sept 2025</div>
-          <div class="timeline-content">
-            <h3>Software Engineer | Agile Software, Pune</h3>
-            <h4>Project: Party Track</h4>
-            <p>
-              <strong>Technologies:</strong> React JS, JavaScript, HTML,
-              Tailwind CSS, Redux RTK-Query
-            </p>
-            <ul>
-              <li>
-                Created <strong>reusable components</strong> to promote
-                modularity and maintainability across the application
-              </li>
-              <li>
-                Utilized <strong>RTK Query</strong> from Redux Toolkit to
-                efficiently fetch and manage REST API calls with caching and
-                auto-refetching capabilities
-              </li>
-              <li>
-                Ensured <strong>responsive design</strong> for optimal user
-                experience across various screen sizes and devices
-              </li>
-              <li>
-                Developed corresponding <strong>test cases</strong> for each
-                component and page to ensure reliability and functionality
-              </li>
-              <li>
-                Collaborated with UX designers to implement pixel-perfect
-                interfaces
-              </li>
-              <li>
-                Participated in code reviews and implemented best practices
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Nov 2024 – Nov 2024</div>
-          <div class="timeline-content">
-            <h3>Software Engineer | Agile Software, Pune</h3>
-            <h4>Project: Canteen Admin Panel</h4>
-            <p>
-              <strong>Technologies:</strong> React JS, JavaScript, HTML,
-              Tailwind CSS, Context API
-            </p>
-            <ul>
-              <li>
-                Designed a <strong>Login Page</strong> enabling user
-                authentication using username and password
-              </li>
-              <li>
-                Implemented
-                <strong>secure token-based authentication</strong> to manage
-                user sessions
-              </li>
-              <li>
-                Utilized <strong>Context API</strong> to manage and share
-                authentication state across the application
-              </li>
-              <li>
-                Developed a <strong>Data View Page</strong> with filters for
-                daily, weekly, and monthly data insights
-              </li>
-              <li>
-                Displayed filtered results in a structured table view for easy
-                readability
-              </li>
-              <li>
-                Integrated <strong>Excel export functionality</strong> to
-                support offline data access and reporting
-              </li>
-              <li>
-                Optimized performance by implementing lazy loading for data
-                tables
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">May 2024 – April 2025</div>
-          <div class="timeline-content">
-            <h3>Software Engineer | Agile Software, Pune</h3>
-            <h4>Project: Quickbooks Eazyconnect</h4>
-            <p>
-              <strong>Technologies:</strong> React JS, JavaScript, HTML, CSS,
-              Context API, Node JS, Express JS, PostgreSQL
-            </p>
-            <ul>
-              <li>
-                Synced <strong>invoices and customer data</strong> from Intuit
-                QuickBooks to a Monday board
-              </li>
-              <li>
-                Utilized <strong>React.js</strong> for the frontend to build an
-                interactive and responsive UI
-              </li>
-              <li>
-                Utilized <strong>Context API</strong> to manage and share
-                authentication state across the application
-              </li>
-              <li>
-                Implemented the <strong>backend</strong> using Node.js and
-                Express.js for API handling and business logic
-              </li>
-              <li>
-                Used <strong>PostgreSQL</strong> as the database for reliable
-                data storage and management
-              </li>
-              <li>
-                Implemented <strong>data validation</strong> and error handling
-                for robust API endpoints
-              </li>
-              <li>
-                Created <strong>comprehensive documentation</strong> for API
-                endpoints and integration processes
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">July 2024 – Nov 2025</div>
-          <div class="timeline-content">
-            <h3>Software Engineer | Agile Software, Pune</h3>
-            <h4>Project: Innovatix - AI / Church</h4>
-            <p>
-              <strong>Technologies:</strong> React JS, JavaScript, HTML, CSS,
-              Context API, Node JS, Express JS, PostgreSQL
-            </p>
-            <ul>
-              <li>
-                Worked on the <strong>Stripe payment module</strong> to handle
-                secure transactions and billing
-              </li>
-              <li>
-                Implemented <strong>CRUD functionalities</strong> in Node.js
-                using Express.js and Sequelize ORM
-              </li>
-              <li>
-                Utilized a <strong>PostgreSQL database</strong> for efficient
-                data storage and management
-              </li>
-              <li>
-                Integrated <strong>AI functionality</strong> to enhance user
-                experience and automate specific workflows
-              </li>
-              <li>
-                Designed the project architecture to support
-                <strong>multi-tenancy</strong>, enabling isolated environments
-                for multiple clients
-              </li>
-              <li>
-                Implemented <strong>role-based access control</strong> for
-                different user types
-              </li>
-              <li>
-                Optimized database queries for improved performance with large
-                datasets
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Jan 2024 - July 2024</div>
-          <div class="timeline-content">
-            <h3>Software Engineer | Agile Software, Pune</h3>
-            <h4>Project: WWI (World Wide Information)</h4>
-            <p>
-              <strong>Technologies:</strong> HTML, CSS, JavaScript, React JS
-            </p>
-            <ul>
-              <li>
-                Developed functionality for <strong>multi-tenancy</strong> to
-                support multiple clients within a single application instance
-              </li>
-              <li>
-                Implemented <strong>file uploading</strong> through AWS S3
-                buckets using React.js
-              </li>
-              <li>
-                Incorporated <strong>polling mechanisms</strong> to monitor file
-                upload status in real-time
-              </li>
-              <li>
-                Managed <strong>CRUD operations</strong> (Create, Read, Update,
-                Delete) across entities
-              </li>
-              <li>
-                Integrated <strong>role-based access control</strong> (RBAC) to
-                ensure secure and permission-based data access
-              </li>
-              <li>
-                Implemented <strong>data caching</strong> strategies to improve
-                application performance
-              </li>
-              <li>
-                Created <strong>custom hooks</strong> for reusable business
-                logic across components
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Experience Section Ends -->
-
-    <!-- Projects Section Starts -->
-    <section class="projects" id="projects">
-      <h1 class="heading" style="color: white">My Projects</h1>
-      <div class="box-container">
-        <div class="box">
-          <img src="javascript.jpg" alt="Frontend Projects" />
-          <div class="content">
-            <i class="fas fa-info"></i>
-            <h3>Frontend Projects</h3>
-            <p>HTML, CSS, JavaScript Mini-Projects</p>
-            <a
-              href="https://github.com/omkaringawale21/Front_End_Miniprojects"
-              target="_blank"
-              class="btn"
-              >View on GitHub</a
-            >
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="reactjs.jpg" alt="React Projects" />
-          <div class="content">
-            <i class="fas fa-info"></i>
-            <h3>React Projects</h3>
-            <p>React JS Mini-Projects</p>
-            <a
-              href="https://github.com/omkaringawale21/ReactJS-MiniProjects.git"
-              target="_blank"
-              class="btn"
-              >View on GitHub</a
-            >
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="database.jpg" alt="MERN Projects" />
-          <div class="content">
-            <i class="fas fa-info"></i>
-            <h3>MERN Projects</h3>
-            <p>MERN Stack Mini-Projects</p>
-            <a
-              href="https://github.com/omkaringawale21/MernStack.git"
-              target="_blank"
-              class="btn"
-              >View on GitHub</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Projects Section Ends -->
-
-    <!-- Contact Section Starts -->
-    <section class="contact" id="contact">
-      <h1 class="heading">Contact Me</h1>
-      <div class="row">
-        <div class="content">
-          <h3 class="title">Contact Info</h3>
-          <div class="info">
-            <h3>
-              <i class="fas fa-envelope"></i>
-              <span style="text-transform: lowercase"
-                >omkaringawale21@gmail.com, omkaringawale2108@gmail.com</span
-              >
-            </h3>
-            <h3><i class="fas fa-phone"></i> +91 8484015599, 9075772072</h3>
-            <h3><i class="fas fa-map-marker-alt"></i> Pune, India</h3>
-            <h3>
-              <i class="fab fa-linkedin"></i>
-              <a
-                href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/"
-                target="_blank"
-                style="text-transform: lowercase; cursor: pointer; color: black"
-                >https://www.linkedin.com/in/omkar-ingawale-034a6b214</a
-              >
-            </h3>
-            <h3>
-              <i class="fab fa-github"></i>
-              <a
-                href="https://github.com/omkaringawale21/omkaringawale21.github.io/"
-                target="_blank"
-                style="text-transform: lowercase; cursor: pointer; color: black"
-                >https://github.com/omkaringawale21/omkaringawale21.github.io</a
-              >
-            </h3>
-            <button id="downloadResume" class="download-btn">
-              <i class="fa-solid fa-download"></i> Download CV
-            </button>
-          </div>
-        </div>
-        <form action="">
-          <input type="text" placeholder="Name" class="box" />
-          <input type="email" placeholder="Email" class="box" />
-          <input type="text" placeholder="Subject" class="box" />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            class="box message"
-            placeholder="Message"
-          ></textarea>
-          <button type="submit" class="btn">
-            Send <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </section>
-    <!-- Contact Section Ends -->
-
-    <script src="Personal_Portfolio.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("ybYie7tmzy7N_57V7");
-      })();
-    </script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="./Personal_Portfolio.js"></script>
+</body>
 </html>
