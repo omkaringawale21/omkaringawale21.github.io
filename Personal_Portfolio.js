@@ -5,31 +5,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menu-btn");
   const navbar = document.querySelector(".navbar");
   const navbarImg = document.querySelector(".navbar-img");
-  if(menuBtn) menuBtn.onclick = () => { navbar.classList.toggle("active"); navbarImg?.classList.toggle("active"); };
+  const resumeModal = document.getElementById("resumeModal");
+
+  function closeNav() {
+    navbar?.classList.remove("active");
+    navbarImg?.classList.remove("active");
+  }
+
+  function closeModal() {
+    if (resumeModal && resumeModal.classList.contains("active")) {
+      resumeModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  }
+
+  if (menuBtn) menuBtn.onclick = () => {
+    navbar.classList.toggle("active");
+    navbarImg?.classList.toggle("active");
+  };
+
   document.querySelectorAll(".navbar a").forEach(link => {
-    link.onclick = () => { navbar.classList.remove("active"); navbarImg?.classList.remove("active"); };
+    link.onclick = () => {
+      closeNav();
+      closeModal();
+    };
   });
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute("href"));
-      if(target) target.scrollIntoView({ behavior: "smooth" });
+      if (target) target.scrollIntoView({ behavior: "smooth" });
     });
   });
 
   // ===== HOME IMAGE PARALLAX =====
   const homeImg = document.querySelector(".home-img");
-  if(homeImg) {
+  if (homeImg) {
     document.querySelector(".home").addEventListener("mousemove", (e) => {
       const x = (e.clientX / window.innerWidth) * 20;
       const y = (e.clientY / window.innerHeight) * 20;
-      homeImg.style.transform = `translate(${x/6}px, ${y/6}px)`;
+      homeImg.style.transform = `translate(${x / 6}px, ${y / 6}px)`;
     });
   }
 
   // ===== CONTACT FORM =====
   const form = document.getElementById("contactForm");
-  if(form) {
+  if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const templateParams = {
@@ -45,54 +67,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== RESUME MODAL (View Resume) =====
-  const resumeModal = document.getElementById("resumeModal");
+  // ===== VIEW RESUME (opens Resume.html in new tab) =====
   const viewResumeBtn = document.getElementById("viewResume");
-  const closeModalBtn = document.getElementById("closeResumeModal");
-
-  if(viewResumeBtn) {
+  if (viewResumeBtn) {
     viewResumeBtn.addEventListener("click", () => {
-      resumeModal.classList.add("active");
-      document.body.style.overflow = "hidden";
+      window.open("./Resume.html", "_blank", "noopener,noreferrer");
     });
   }
 
-  if(closeModalBtn) {
-    closeModalBtn.addEventListener("click", () => {
-      resumeModal.classList.remove("active");
-      document.body.style.overflow = "";
-    });
-  }
+  // ===== DOWNLOAD PDF (real file download with fallback) =====
+  const downloadBtn = document.getElementById("downloadResume");
+  if (downloadBtn) {
+    downloadBtn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const pdfUrl = "./Omkar_Ingawale_Resume.pdf";
 
-  // Close modal on outside click
-  if(resumeModal) {
-    resumeModal.addEventListener("click", (e) => {
-      if(e.target === resumeModal) {
-        resumeModal.classList.remove("active");
-        document.body.style.overflow = "";
+      try {
+        // Check if PDF exists (HEAD request)
+        const res = await fetch(pdfUrl, { method: "HEAD" });
+        if (!res.ok) throw new Error("PDF not found");
+
+        // Trigger download
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "Omkar_Ingawale_Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (err) {
+        console.warn("PDF not available, opening printable Resume.html instead.");
+        window.open("./Resume.html", "_blank", "noopener,noreferrer");
       }
     });
   }
 
-  // Close modal on Escape key
-  document.addEventListener("keydown", (e) => {
-    if(e.key === "Escape" && resumeModal.classList.contains("active")) {
-      resumeModal.classList.remove("active");
-      document.body.style.overflow = "";
-    }
-  });
+  // ===== RESUME MODAL (kept for internal quick view if used) =====
+  const closeModalBtn = document.getElementById("closeResumeModal");
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", closeModal);
+  }
 
-  // ===== DOWNLOAD PDF =====
-  const downloadBtn = document.getElementById("downloadResume");
-  if(downloadBtn) {
-    downloadBtn.addEventListener("click", (e) => {
-      // The <a> tag with download attribute handles the actual PDF download.
-      // This listener is just for feedback (optional).
-      console.log("Downloading resume PDF...");
+  if (resumeModal) {
+    resumeModal.addEventListener("click", (e) => {
+      if (e.target === resumeModal) closeModal();
     });
   }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
 });
 
 // ===== CURRENT YEAR =====
 const yearSpan = document.getElementById("currentYear");
-if(yearSpan) yearSpan.textContent = new Date().getFullYear();
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();

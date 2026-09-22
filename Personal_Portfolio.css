@@ -698,3 +698,23 @@ a { text-decoration: none; }
   .resume-right-panel { padding: 1.5rem; }
   .resume-modal { padding: 1rem 0.5rem; }
 }
+
+.download-btn {
+  background: var(--black);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.download-btn:hover {
+  background: var(--yellow);
+  color: black;
+}
