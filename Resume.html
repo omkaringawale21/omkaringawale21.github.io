@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Omkar Ingawale | Full Stack Developer Portfolio</title>
-  <!-- Google Fonts & Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omkar Ingawale - Full Stack Developer Resume</title>
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,517 +15,569 @@
       box-sizing: border-box;
     }
 
-    :root {
-      --yellow: #f5c518;
-      --yellow-dark: #e0b015;
-      --black: #0a0a0a;
-      --white: #ffffff;
-      --gray-100: #f8f9fa;
-      --gray-200: #e9ecef;
-      --gray-800: #212529;
-      --dark-bg: #0f172a;
-      --card-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.12);
-      --transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.5;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: var(--gray-200); }
-    ::-webkit-scrollbar-thumb { background: var(--yellow); border-radius: 10px; }
-
-    section { padding: 6rem 8%; }
-
-    .heading {
-      font-size: 2.8rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      margin-bottom: 3rem;
-      position: relative;
-      display: inline-block;
-    }
-    .heading:after {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 0;
-      width: 60px;
-      height: 4px;
-      background: var(--yellow);
-      border-radius: 4px;
-    }
-
-    /* HEADER */
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(10px);
-      padding: 1rem 8%;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #e2e8f0;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.03);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, var(--black) 0%, #2c2c2c 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    #menu-btn {
-      font-size: 1.8rem;
-      background: var(--black);
-      color: white;
-      width: 42px;
-      height: 42px;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: var(--transition);
-      display: none;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 2rem 1rem;
     }
-    #menu-btn:hover { background: var(--yellow); color: black; }
 
-    /* SIDEBAR NAV */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: -320px;
-      width: 300px;
-      height: 100vh;
-      background: var(--black);
-      z-index: 1100;
-      padding: 8rem 2rem 3rem;
-      transition: 0.3s ease;
-      box-shadow: 4px 0 30px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    /* Resume Paper */
+    .resume {
+      max-width: 1100px;
+      width: 100%;
+      background: white;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      overflow: hidden;
     }
-    .navbar.active { left: 0; }
-    .navbar a {
-      color: #e2e8f0;
-      font-size: 1.4rem;
-      font-weight: 500;
+
+    /* Two column layout */
+    .resume-inner {
       display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.8rem 1rem;
-      border-radius: 14px;
-      transition: 0.2s;
+      flex-wrap: wrap;
+    }
+
+    /* LEFT PANEL (Dark) */
+    .left-panel {
+      background: #0f172a;
+      color: #e2e8f0;
+      flex: 1;
+      min-width: 280px;
+      padding: 2rem 1.8rem;
+    }
+
+    .profile-img {
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+    .profile-img img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #f5c518;
+      background: #1e293b;
+    }
+
+    .left-panel h2 {
+      color: #f5c518;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      margin: 1.5rem 0 0.8rem 0;
+      border-bottom: 2px solid rgba(245,197,24,0.3);
+      display: inline-block;
+      padding-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .contact-info p {
+      margin: 0.7rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.82rem;
+      flex-wrap: wrap;
+      word-break: break-word;
+    }
+    .contact-info i {
+      width: 20px;
+      color: #f5c518;
+      font-size: 0.9rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .contact-info a {
+      color: #cbd5e1;
       text-decoration: none;
     }
-    .navbar a i { width: 28px; font-size: 1.3rem; }
-    .navbar a:hover { background: var(--yellow); color: black; transform: translateX(6px); }
-    .navbar-img {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 320px;
-      height: 100vh;
-      z-index: 1050;
-      transition: 0.3s ease;
-      pointer-events: none;
-    }
-    .navbar-img.active { right: 0; }
-    .navbar-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2); opacity: 0.9; }
 
-    /* HOME */
-    .home {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: linear-gradient(125deg, #fffdf5 0%, #ffffff 100%);
-      position: relative;
-      overflow: hidden;
-      padding-top: 8rem;
+    .skill-item {
+      margin: 0.8rem 0;
     }
-    .home-content { max-width: 700px; position: relative; z-index: 2; }
-    .home h3 { font-size: 2.2rem; font-weight: 500; color: #2d3e50; }
-    .home-text {
-      font-size: 4rem !important;
-      font-weight: 800 !important;
-      color: #0f172a;
-      margin: 0.5rem 0;
-      letter-spacing: -1px;
-    }
-    .highlight { color: var(--yellow); -webkit-text-stroke: 0.5px #0f172a; }
-    .home-img {
-      position: absolute;
-      right: 6%;
-      bottom: 12%;
-      width: 320px;
-      height: 320px;
-      object-fit: cover;
-      border-radius: 38% 62% 68% 32% / 44% 48% 52% 56%;
-      border: 5px solid white;
-      box-shadow: 0 25px 40px rgba(0,0,0,0.2);
-      transition: transform 0.4s;
-      z-index: 2;
-    }
-    @media (max-width: 1000px) {
-      .home-img { width: 240px; height: 240px; right: 5%; bottom: 15%; }
-    }
-    @media (max-width: 750px) {
-      .home-img { position: relative; margin: 2rem auto 0; right: auto; bottom: auto; display: block; }
-      .home { text-align: center; align-items: center; }
-      .home-content { text-align: center; }
-    }
-
-    /* wave */
-    .wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 90px;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.11,142.21,115.22,204.36,91.08,257.28,70.51,294.51,61.21,321.39,56.44Z" fill="%23f5c518" opacity="0.8"></path></svg>') repeat-x;
-      background-size: 1200px 90px;
-      animation: waveAnim 18s linear infinite;
-      pointer-events: none;
-    }
-    .wave2 { bottom: 0; opacity: 0.4; animation: waveAnim 25s linear reverse infinite; }
-    @keyframes waveAnim {
-      0% { background-position-x: 0; }
-      100% { background-position-x: 1200px; }
-    }
-
-    /* About */
-    .about { background: var(--dark-bg); color: white; }
-    .about-container { display: flex; flex-wrap: wrap; gap: 2.5rem; margin-top: 2rem; }
-    .about-card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 28px;
-      padding: 2rem;
-      flex: 1 1 260px;
-      backdrop-filter: blur(2px);
-    }
-    .profile-img { text-align: center; }
-    .profile-img img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 5px solid var(--yellow);
-      object-fit: cover;
-    }
-    .info p {
-      font-size: 1rem;
-      margin: 1rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: space-between;
-      border-bottom: 1px dashed rgba(255,255,255,0.2);
-      padding-bottom: 0.6rem;
-    }
-    .info p span { color: var(--yellow); font-weight: 600; }
-    .skill-box {
-      background: rgba(255,255,255,0.05);
-      border-radius: 28px;
-      padding: 1.8rem;
-      margin-top: 2rem;
-    }
-    .skill-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--yellow); }
-    .progress { margin: 1.2rem 0; }
-    .progress h3 { display: flex; justify-content: space-between; font-size: 0.95rem; font-weight: 500; }
-    .bar { background: #2d3748; height: 8px; border-radius: 12px; margin-top: 6px; overflow: hidden; }
-    .bar span { display: block; height: 100%; background: var(--yellow); border-radius: 12px; }
-
-    /* Experience Timeline Modern */
-    .experience { background: #fefefe; }
-    .timeline { position: relative; max-width: 1100px; margin: 3rem auto; }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      width: 3px;
-      background: linear-gradient(to bottom, var(--yellow), #0f172a);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .timeline-item {
-      width: 50%;
-      padding: 1rem 2.5rem;
-      position: relative;
-      margin-bottom: 3rem;
-    }
-    .timeline-item:nth-child(odd) { left: 0; text-align: right; }
-    .timeline-item:nth-child(even) { left: 50%; text-align: left; }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      background: white;
-      border: 3px solid var(--yellow);
-      border-radius: 50%;
-      top: 24px;
-      z-index: 2;
-    }
-    .timeline-item:nth-child(odd)::after { right: -9px; }
-    .timeline-item:nth-child(even)::after { left: -9px; }
-    .timeline-content {
-      background: white;
-      padding: 1.6rem;
-      border-radius: 24px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-      transition: 0.2s;
-      border: 1px solid #eee;
-    }
-    .timeline-content:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1); }
-    .timeline-date {
-      background: var(--yellow);
-      display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
+    .skill-title {
+      font-weight: 600;
       font-size: 0.8rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
+      margin-bottom: 4px;
+      color: #cbd5e1;
     }
-    .timeline-content h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.3rem; }
-    .timeline-content h4 { color: #2c5282; font-weight: 600; font-size: 1rem; margin-bottom: 0.8rem; }
-    .timeline-content ul { padding-left: 1.2rem; margin-top: 0.5rem; }
-    .timeline-content li { font-size: 0.85rem; margin: 0.5rem 0; }
-    @media (max-width: 800px) {
-      .timeline::before { left: 20px; }
-      .timeline-item { width: 100%; padding-left: 50px; text-align: left; left: 0 !important; }
-      .timeline-item:nth-child(odd)::after, .timeline-item:nth-child(even)::after { left: 11px; right: auto; }
-      .timeline-item:nth-child(odd) .timeline-content, .timeline-item:nth-child(even) .timeline-content { text-align: left; }
+    .skill-bar {
+      background: #334155;
+      height: 6px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .skill-bar span {
+      display: block;
+      height: 6px;
+      background: #f5c518;
+      border-radius: 10px;
     }
 
-    /* Contact */
-    .contact { background: white; }
-    .contact-row { display: flex; flex-wrap: wrap; gap: 2.5rem; }
-    .contact-info { flex: 1; background: #f9fafc; border-radius: 28px; padding: 2rem; }
-    .contact-info .info-item {
+    .left-panel .cert-item {
+      font-size: 0.8rem;
+      margin: 6px 0;
+      color: #cbd5e1;
+    }
+    .left-panel .cert-item i {
+      color: #f5c518;
+      margin-right: 6px;
+    }
+
+    /* RIGHT PANEL */
+    .right-panel {
+      flex: 2.2;
+      background: white;
+      padding: 2rem 2.2rem;
+    }
+
+    .header-name {
+      margin-bottom: 1rem;
+    }
+    .header-name h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .header-name p {
+      font-size: 1.1rem;
+      color: #f5c518;
+      font-weight: 600;
+      margin-top: 5px;
+      background: #0f172a;
+      display: inline-block;
+      padding: 3px 14px;
+      border-radius: 20px;
+    }
+
+    .tagline {
+      background: #f8fafc;
+      padding: 1rem 1.2rem;
+      border-left: 4px solid #f5c518;
+      margin: 1.2rem 0;
+      font-size: 0.88rem;
+      color: #334155;
+      border-radius: 8px;
+      line-height: 1.5;
+    }
+
+    .section {
+      margin: 1.6rem 0;
+    }
+    .section h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
       display: flex;
       align-items: center;
-      gap: 1rem;
-      margin: 1.8rem 0;
-      flex-wrap: wrap;
-    }
-    .info-item i { font-size: 1.8rem; color: var(--yellow); width: 40px; }
-    .contact-form { flex: 1.5; background: #f9fafc; border-radius: 28px; padding: 2rem; }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 1rem;
+      gap: 10px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
       margin-bottom: 1rem;
-      border: 1px solid #e2e8f0;
-      border-radius: 20px;
-      font-family: inherit;
-      transition: 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .contact-form button, .download-btn {
-      background: var(--black);
+    .section h3 i {
+      color: #f5c518;
+      font-size: 1rem;
+    }
+
+    .job, .project-item, .edu-item {
+      margin-bottom: 1.3rem;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: baseline;
+      margin-bottom: 0.2rem;
+      gap: 8px;
+    }
+    .job-title {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+    .company {
+      font-weight: 600;
+      color: #475569;
+      margin-top: 2px;
+      font-size: 0.88rem;
+    }
+    .date {
+      font-size: 0.72rem;
+      color: #7c5e00;
+      background: #fef9e6;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+      border: 1px solid #f5e6b3;
+    }
+    .job ul, .project-item ul {
+      margin-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+    .job li, .project-item li {
+      font-size: 0.8rem;
+      color: #334155;
+      margin: 0.35rem 0;
+      line-height: 1.45;
+    }
+    .tech-badge-mini {
+      display: inline-block;
+      background: #eef2ff;
+      color: #0f172a;
+      font-size: 0.66rem;
+      padding: 2px 9px;
+      border-radius: 20px;
+      margin-right: 6px;
+      margin-top: 6px;
+      font-weight: 600;
+      border: 1px solid #e0e7ff;
+    }
+    .project-item strong {
+      color: #0f172a;
+      font-size: 0.9rem;
+    }
+
+    hr {
+      margin: 1rem 0;
+      border: 0;
+      height: 1px;
+      background: #e2e8f0;
+    }
+
+    .print-btn {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    .print-btn button {
+      background: #0f172a;
       color: white;
       border: none;
-      padding: 0.8rem 2rem;
+      padding: 12px 28px;
+      font-size: 1rem;
       border-radius: 40px;
-      font-weight: 600;
       cursor: pointer;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       transition: 0.2s;
     }
-    .contact-form button:hover, .download-btn:hover { background: var(--yellow); color: black; }
-
-    footer { text-align: center; padding: 2rem; background: #0a0a0a; color: #aaa; font-size: 0.8rem; }
-    @media (max-width: 768px) {
-      section { padding: 4rem 5%; }
-      .heading { font-size: 2rem; }
-      #menu-btn { display: flex; }
-      .navbar-img { display: none; }
+    .print-btn button:hover {
+      background: #f5c518;
+      color: #0f172a;
     }
-    a { text-decoration: none; }
-    .text-small { font-size: 0.9rem; word-break: break-word; }
-    .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-    .tech-badge {
-      background: #f0f0f0;
-      padding: 4px 12px;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: #1e293b;
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        margin: 0;
+      }
+      .resume {
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .print-btn {
+        display: none;
+      }
+      .left-panel {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .date {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .tech-badge-mini {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .header-name p {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 780px) {
+      body { padding: 0.5rem; }
+      .resume-inner { flex-direction: column; }
+      .left-panel { text-align: center; }
+      .contact-info p { justify-content: center; }
+      .job-header { flex-direction: column; gap: 4px; }
+      .header-name h1 { font-size: 1.8rem; }
+      .right-panel { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
+<div class="resume">
+  <div class="resume-inner">
 
-<header class="header">
-  <a href="#home" class="logo">⚡ OMNIKRAFT</a>
-  <div id="menu-btn" class="fa-solid fa-bars"></div>
-</header>
+    <!-- ================= LEFT PANEL ================= -->
+    <div class="left-panel">
+      <div class="profile-img">
+        <img src="https://placehold.co/400x400/1e293b/f5c518?text=OMKAR" alt="Omkar Ingawale">
+      </div>
 
-<nav class="navbar">
-  <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="#about"><i class="fa-solid fa-address-card"></i> About</a>
-  <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
-  <a href="#contact"><i class="fa-solid fa-phone-volume"></i> Contact</a>
-</nav>
-<div class="navbar-img"><img src="https://placehold.co/800x1000/2c3e50/white?text=dev+vision" alt="nav-bg"></div>
+      <div class="contact-info">
+        <h2>Contact</h2>
+        <p><i class="fas fa-phone"></i> +91 8484015599 / 9075772072</p>
+        <p><i class="fas fa-envelope"></i> omkaringawale21@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Pune, India</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/" target="_blank">linkedin.com/in/omkar-ingawale</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/omkaringawale21" target="_blank">github.com/omkaringawale21</a></p>
+      </div>
 
-<!-- HOME -->
-<section class="home" id="home">
-  <div class="home-content">
-    <h3>Hi, my name is</h3>
-    <h3 class="home-text">Omkar Abhay Ingawale</h3>
-    <h3 style="font-size: 1.8rem;">I'm a <span class="highlight">Full Stack Developer</span></h3>
-    <p style="margin-top: 1.5rem; max-width: 500px;">Detail-oriented Software Engineer skilled in front-end and full-stack development with expertise in modern web technologies, responsive UI design, backend integration, and cloud-based deployment.</p>
-  </div>
-  <img src="https://placehold.co/400x400/0f172a/white?text=OMKAR" class="home-img" alt="Omkar">
-  <div class="wave"></div><div class="wave wave2"></div>
-</section>
+      <h2>Technical Skills</h2>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <h1 class="heading" style="color:white">About Me</h1>
-  <div class="about-container">
-    <div class="about-card profile-img"><img src="https://placehold.co/300x300/f5c518/0f172a?text=OI" alt="Omkar"></div>
-    <div class="about-card info">
-      <p><strong>Omkar Abhay Ingawale</strong> <span>: Name</span></p>
-      <p>Full Stack Developer <span>: Role</span></p>
-      <p>Pune, India <span>: Location</span></p>
-      <p>+91 8484015599 <span>: Phone</span></p>
-      <p style="text-transform:lowercase">omkaringawale21@gmail.com <span>: Email</span></p>
-      <p><a href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/" target="_blank" style="color:var(--yellow)">LinkedIn Profile</a> <span>: Social</span></p>
+      <div class="skill-item">
+        <div class="skill-title">HTML5, CSS3, SCSS, Tailwind CSS</div>
+        <div class="skill-bar"><span style="width:90%"></span></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-title">JavaScript, TypeScript</div>
+        <div class="skill-bar"><span style="width:88%"></span></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-title">React JS, Next JS</div>
+        <div class="skill-bar"><span style="width:85%"></span></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-title">ASP.NET Core Web API</div>
+        <div class="skill-bar"><span style="width:82%"></span></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-title">Node JS, Express JS</div>
+        <div class="skill-bar"><span style="width:80%"></span></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-title">MongoDB, PostgreSQL</div>
+        <div class="skill-bar"><span style="width:78%"></span></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-title">Material UI, Bootstrap, React Lucide</div>
+        <div class="skill-bar"><span style="width:85%"></span></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-title">AWS (S3, EC2), Docker</div>
+        <div class="skill-bar"><span style="width:70%"></span></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-title">JEST, Vitest, LINT Unit Testing</div>
+        <div class="skill-bar"><span style="width:80%"></span></div>
+      </div>
+
+      <h2>Tools</h2>
+      <div class="skill-item">
+        <div class="skill-title">Postman · Jira · Git · GitHub · GitLab</div>
+        <div class="skill-bar"><span style="width:88%"></span></div>
+      </div>
+
+      <h2>Certification</h2>
+      <p class="cert-item"><i class="fas fa-certificate"></i> Full Stack Web Development – Java Patil (Feb 2023)</p>
+
+      <h2>Achievements</h2>
+      <p class="cert-item"><i class="fas fa-trophy"></i> Second prize in 'Parashot Design'</p>
+      <p class="cert-item"><i class="fas fa-star"></i> Multiple client appreciations for demo presentations & production releases</p>
     </div>
-    <div class="about-card">
-      <h3 style="font-size:1.6rem; margin-bottom:1rem;">Profile</h3>
-      <p>Detail-oriented Software Engineer skilled in front-end and full-stack development with expertise in modern web technologies, responsive UI design, backend integration, and cloud-based deployment. Proven track record in FinTech, real estate, and AI-driven platforms.</p>
+
+    <!-- ================= RIGHT PANEL ================= -->
+    <div class="right-panel">
+      <div class="header-name">
+        <h1>OMKAR ABHAY INGAWALE</h1>
+        <p>Full Stack Developer</p>
+      </div>
+
+      <div class="tagline">
+        🔹 Detail-oriented Software Engineer skilled in front-end and full-stack development with expertise in modern web technologies, responsive UI design, backend integration, and cloud-based deployment.
+      </div>
+
+      <!-- WORK EXPERIENCE -->
+      <div class="section">
+        <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+
+        <!-- Hodudata Technologies -->
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Engineer</span>
+            <span class="date">Jan 2026 – Present</span>
+          </div>
+          <div class="company">Hodudata Technologies Private Limited (Atos Partner), Pune</div>
+          <ul>
+            <li><strong>Project: DMS One (Collection Finance Application)</strong> — Client: Bajaj Finance Private Limited</li>
+            <li><strong>Technology:</strong> ASP.NET Core Web API, REST APIs, Redis Cache, AES-GCM Encryption</li>
+            <li>Developed and maintained scalable RESTful APIs using ASP.NET Core Web API for loan collection and finance management processes.</li>
+            <li>Implemented customer account, loan repayment, payment tracking, and collection workflow functionalities.</li>
+            <li>Utilized Redis Cache and implemented AES-GCM encryption to all APIs to improve application performance.</li>
+          </ul>
+          <div>
+            <span class="tech-badge-mini">ASP.NET Core</span>
+            <span class="tech-badge-mini">Redis Cache</span>
+            <span class="tech-badge-mini">AES-GCM</span>
+            <span class="tech-badge-mini">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Agile Software – SiteOne Backend -->
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Engineer (Backend)</span>
+            <span class="date">Jan 2024 – Sept 2025</span>
+          </div>
+          <div class="company">Agile Software, Pune — SiteOne (Real Estate Project)</div>
+          <ul>
+            <li><strong>Technology:</strong> ASP.NET Core Web API, REST APIs, Razorpay, AWS S3, PostgreSQL, JWT, Multi-Tenancy Architecture</li>
+            <li>Developed and maintained RESTful APIs using ASP.NET Core to support real estate functionalities such as user management, property listing, and payment integration.</li>
+            <li>Implemented Role-Based Access Control (RBAC) for different user types: Super Admin, Sub-Admin, Homeowner, and Subcontractor to ensure secure access to system resources.</li>
+            <li>Integrated Razorpay payment gateway to handle secure and reliable online transactions.</li>
+            <li>Architectured multi-tenancy support to allow logical separation of tenants and their associated data within the same application infrastructure.</li>
+            <li>Managed secure file storage and retrieval by integrating AWS S3 for storing user documents and property-related files.</li>
+            <li>Applied JWT-based authentication to ensure secure API access.</li>
+            <li>Collaborated closely with frontend developers to ensure seamless API consumption and consistent data handling.</li>
+          </ul>
+          <div>
+            <span class="tech-badge-mini">ASP.NET Core</span>
+            <span class="tech-badge-mini">Razorpay</span>
+            <span class="tech-badge-mini">JWT</span>
+            <span class="tech-badge-mini">PostgreSQL</span>
+            <span class="tech-badge-mini">AWS S3</span>
+            <span class="tech-badge-mini">Multi-Tenancy</span>
+          </div>
+        </div>
+
+        <!-- Agile Software – SiteOne Frontend -->
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Engineer (Frontend)</span>
+            <span class="date">Jan 2024 – Sept 2025</span>
+          </div>
+          <div class="company">Agile Software, Pune — SiteOne (Real Estate Project)</div>
+          <ul>
+            <li><strong>Technology:</strong> React JS, JavaScript, HTML, SCSS, Context API, Class based components</li>
+            <li>Created reusable components to promote modularity and maintainability across the application.</li>
+            <li>Ensured responsive design for optimal user experience across various screen sizes and devices.</li>
+            <li>Managed CRUD operations (Create, Read, Update, Delete) across entities.</li>
+            <li>Integrated role-based access control (RBAC) to ensure secure and permission-based data access.</li>
+          </ul>
+          <div>
+            <span class="tech-badge-mini">React JS</span>
+            <span class="tech-badge-mini">Context API</span>
+            <span class="tech-badge-mini">SCSS</span>
+            <span class="tech-badge-mini">Class Components</span>
+          </div>
+        </div>
+
+        <!-- Agile Software – Party Track -->
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Engineer</span>
+            <span class="date">Nov 2024 – Sept 2025</span>
+          </div>
+          <div class="company">Agile Software, Pune — Party Track</div>
+          <ul>
+            <li><strong>Technology:</strong> React JS, JavaScript, HTML, Tailwind CSS, Redux RTK-Query</li>
+            <li>Created reusable components to promote modularity and maintainability across the application.</li>
+            <li>Utilized RTK Query from Redux Toolkit to efficiently fetch and manage REST API calls with caching and auto-refetching capabilities.</li>
+            <li>Ensured responsive design for optimal user experience across various screen sizes and devices.</li>
+            <li>Developed corresponding test cases for each component and page to ensure reliability and functionality.</li>
+          </ul>
+          <div>
+            <span class="tech-badge-mini">React JS</span>
+            <span class="tech-badge-mini">Redux RTK Query</span>
+            <span class="tech-badge-mini">Tailwind CSS</span>
+            <span class="tech-badge-mini">Jest</span>
+          </div>
+        </div>
+
+        <!-- Agile Software – Innovativs AI/Church -->
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Engineer</span>
+            <span class="date">July 2024 – Nov 2025</span>
+          </div>
+          <div class="company">Agile Software, Pune — Innovativs - AI/Church</div>
+          <ul>
+            <li><strong>Technology:</strong> React JS, JavaScript, HTML, CSS, Context API, Node JS, Express JS, PostgreSQL</li>
+            <li>Worked on the Stripe payment module to handle secure transactions and billing.</li>
+            <li>Implemented CRUD functionalities in Node.js using Express.js and Sequelize ORM.</li>
+            <li>Utilized a PostgreSQL database for efficient data storage and management.</li>
+            <li>Integrated AI functionality to enhance user experience and automate specific workflows.</li>
+            <li>Designed the project architecture to support multi-tenancy, enabling isolated environments for multiple clients.</li>
+          </ul>
+          <div>
+            <span class="tech-badge-mini">Node JS</span>
+            <span class="tech-badge-mini">Express JS</span>
+            <span class="tech-badge-mini">Stripe</span>
+            <span class="tech-badge-mini">Sequelize</span>
+            <span class="tech-badge-mini">PostgreSQL</span>
+            <span class="tech-badge-mini">React</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="job-header">
+          <span class="job-title">B.E. Mechanical Engineering</span>
+          <span class="date">2015 – 2019</span>
+        </div>
+        <div style="font-size:0.85rem; color:#475569;">Bharati Vidyapeeth College of Engineering, Kolhapur | 54%</div>
+      </div>
+
+      <!-- COURSES & CERTIFICATION -->
+      <div class="section">
+        <h3><i class="fas fa-certificate"></i> Courses & Certification</h3>
+        <ul style="margin-left:1.2rem;">
+          <li style="font-size:0.82rem; margin:0.4rem 0;">Certification on Full Stack Web Development by Java Patil — <strong>Feb 2023</strong></li>
+        </ul>
+      </div>
+
+      <!-- ACHIEVEMENTS -->
+      <div class="section">
+        <h3><i class="fas fa-trophy"></i> Achievements</h3>
+        <ul style="margin-left:1.2rem;">
+          <li style="font-size:0.82rem; margin:0.4rem 0;">Received second prize in <strong>'Parashot Design'</strong>.</li>
+          <li style="font-size:0.82rem; margin:0.4rem 0;">Received multiple client appreciations for demo presentations and production releases.</li>
+        </ul>
+      </div>
+
+      <hr>
+      <div style="font-size:0.7rem; text-align:center; color:#64748b;">
+        📄 References available on request · Open to full-time opportunities · Available for immediate joining
+      </div>
     </div>
+
   </div>
 
-  <div class="skill-box">
-    <div class="skill-title">📌 Technical Skills</div>
-    <div class="progress"><h3>HTML5, CSS3, SCSS, JavaScript, TypeScript <span>90%</span></h3><div class="bar"><span style="width:90%"></span></div></div>
-    <div class="progress"><h3>React JS, Next JS <span>85%</span></h3><div class="bar"><span style="width:85%"></span></div></div>
-    <div class="progress"><h3>ASP.NET Core <span>80%</span></h3><div class="bar"><span style="width:80%"></span></div></div>
-    <div class="progress"><h3>Node JS <span>80%</span></h3><div class="bar"><span style="width:80%"></span></div></div>
-    <div class="progress"><h3>MongoDB, PostgreSQL <span>75%</span></h3><div class="bar"><span style="width:75%"></span></div></div>
-    <div class="progress"><h3>Material UI, Bootstrap, Tailwind CSS <span>85%</span></h3><div class="bar"><span style="width:85%"></span></div></div>
-    <div class="progress"><h3>AWS (S3, EC2), Docker <span>70%</span></h3><div class="bar"><span style="width:70%"></span></div></div>
-    <div class="progress"><h3>Jest, Vitest Unit Testing <span>80%</span></h3><div class="bar"><span style="width:80%"></span></div></div>
+  <!-- PRINT BUTTON -->
+  <div class="print-btn">
+    <button onclick="window.print();">
+      <i class="fas fa-file-pdf"></i> Save as PDF (Print-friendly)
+    </button>
   </div>
-</section>
+</div>
 
-<!-- EXPERIENCE - AS PER PDF -->
-<section class="experience" id="experience">
-  <h1 class="heading">Work Experience</h1>
-  <div class="timeline">
-    <!-- Hodudata Technologies - DMS One -->
-    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Jan 2026 – Present</span><h3>Software Engineer | Hodudata Technologies Private Limited (Atos Partner), Pune</h3><h4>DMS One (Collection Finance Application) - Client: Bajaj Finance Private Limited</h4><p><strong>ASP.NET Core Web API, REST APIs, Redis Cache, AES-GCM Encryption</strong></p><ul><li>Developed and maintained scalable RESTful APIs using ASP.NET Core Web API for loan collection and finance management processes.</li><li>Implemented customer account, loan repayment, payment tracking, and collection workflow functionalities.</li><li>Utilized Redis Cache and implemented AES-GCM encryption to all APIs to improve application performance.</li></ul><div class="tech-stack"><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">Redis Cache</span><span class="tech-badge">AES-GCM</span><span class="tech-badge">REST APIs</span></div></div></div>
-
-    <!-- Agile Software - SiteOne Backend -->
-    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Jan 2024 – Sept 2025</span><h3>Software Engineer | Agile Software, Pune</h3><h4>SiteOne (Real Estate Project) - Backend</h4><p><strong>ASP.NET Core Web API, REST APIs, Razorpay, AWS S3, PostgreSQL, JWT, Multi-Tenancy Architecture</strong></p><ul><li>Developed and maintained RESTful APIs using ASP.NET Core to support real estate functionalities such as user management, property listing, and payment integration.</li><li>Implemented Role-Based Access Control (RBAC) for different user types: Super Admin, Sub-Admin, Homeowner, and Subcontractor to ensure secure access to system resources.</li><li>Integrated Razorpay payment gateway to handle secure and reliable online transactions.</li><li>Architectured multi-tenancy support to allow logical separation of tenants and their associated data within the same application infrastructure.</li><li>Managed secure file storage and retrieval by integrating AWS S3 for storing user documents and property-related files.</li><li>Applied JWT-based authentication to ensure secure API access.</li><li>Collaborated closely with frontend developers to ensure seamless API consumption and consistent data handling.</li></ul><div class="tech-stack"><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">Razorpay</span><span class="tech-badge">JWT</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">AWS S3</span><span class="tech-badge">Multi-Tenancy</span></div></div></div>
-
-    <!-- Agile Software - SiteOne Frontend -->
-    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Jan 2024 – Sept 2025</span><h3>Software Engineer | Agile Software, Pune</h3><h4>SiteOne (Real Estate Project) - Frontend</h4><p><strong>React JS, JavaScript, HTML, SCSS, Context API, Class based components</strong></p><ul><li>Created reusable components to promote modularity and maintainability across the application.</li><li>Ensured responsive design for optimal user experience across various screen sizes and devices.</li><li>Managed CRUD operations (Create, Read, Update, Delete) across entities.</li><li>Integrated role-based access control (RBAC) to ensure secure and permission-based data access.</li></ul><div class="tech-stack"><span class="tech-badge">React JS</span><span class="tech-badge">Context API</span><span class="tech-badge">SCSS</span><span class="tech-badge">Class Components</span></div></div></div>
-
-    <!-- Agile Software - Party Track -->
-    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">Nov 2024 – Sept 2025</span><h3>Software Engineer | Agile Software, Pune</h3><h4>Party Track</h4><p><strong>React JS, JavaScript, HTML, Tailwind CSS, Redux RTK-Query</strong></p><ul><li>Created reusable components to promote modularity and maintainability across the application.</li><li>Utilized RTK Query from Redux Toolkit to efficiently fetch and manage REST API calls with caching and auto-refetching capabilities.</li><li>Ensured responsive design for optimal user experience across various screen sizes and devices.</li><li>Developed corresponding test cases for each component and page to ensure reliability and functionality.</li></ul><div class="tech-stack"><span class="tech-badge">React JS</span><span class="tech-badge">Redux RTK Query</span><span class="tech-badge">Tailwind CSS</span><span class="tech-badge">Jest</span></div></div></div>
-
-    <!-- Agile Software - Innovativs AI/Church -->
-    <div class="timeline-item"><div class="timeline-content"><span class="timeline-date">July 2024 – Nov 2025</span><h3>Software Engineer | Agile Software, Pune</h3><h4>Innovativs - AI/Church</h4><p><strong>React JS, JavaScript, HTML, CSS, Context API, Node JS, Express JS, PostgreSQL</strong></p><ul><li>Worked on the Stripe payment module to handle secure transactions and billing.</li><li>Implemented CRUD functionalities in Node.js using Express.js and Sequelize ORM.</li><li>Utilized a PostgreSQL database for efficient data storage and management.</li><li>Integrated AI functionality to enhance user experience and automate specific workflows.</li><li>Designed the project architecture to support multi-tenancy, enabling isolated environments for multiple clients.</li></ul><div class="tech-stack"><span class="tech-badge">Node JS</span><span class="tech-badge">Express JS</span><span class="tech-badge">Stripe</span><span class="tech-badge">Sequelize</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">React</span></div></div></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <h1 class="heading">Contact Me</h1>
-  <div class="contact-row">
-    <div class="contact-info">
-      <h3 style="font-size:1.6rem; margin-bottom:1rem;">Let's connect</h3>
-      <div class="info-item"><i class="fas fa-envelope"></i> <span style="word-break:break-all;">omkaringawale21@gmail.com</span></div>
-      <div class="info-item"><i class="fas fa-phone"></i> +91 8484015599 / 9075772072</div>
-      <div class="info-item"><i class="fas fa-map-marker-alt"></i> Pune, India</div>
-      <div class="info-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/" target="_blank">linkedin.com/in/omkar-ingawale</a></div>
-      <div class="info-item"><i class="fab fa-github"></i> <a href="https://github.com/omkaringawale21" target="_blank">github.com/omkaringawale21</a></div>
-      <button id="downloadResume" class="download-btn" style="margin-top:1rem;"><i class="fa-solid fa-download"></i> Download CV (PDF)</button>
-    </div>
-    <form class="contact-form" id="contactForm">
-      <input type="text" placeholder="Your Name" class="box" id="nameInput" required>
-      <input type="email" placeholder="Email Address" class="box" id="emailInput" required>
-      <input type="text" placeholder="Subject" class="box" id="subjectInput">
-      <textarea rows="5" placeholder="Your message..." id="msgInput" class="message"></textarea>
-      <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-    </form>
-  </div>
-</section>
-<footer>
-  <p>© <span id="currentYear"></span> Omkar Ingawale — Full Stack Developer. Built with 💛</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
-  (function() { emailjs.init("ybYie7tmzy7N_57V7"); })();
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.getElementById("menu-btn");
-    const navbar = document.querySelector(".navbar");
-    const navbarImg = document.querySelector(".navbar-img");
-    if(menuBtn) menuBtn.onclick = () => { navbar.classList.toggle("active"); navbarImg?.classList.toggle("active"); };
-    document.querySelectorAll(".navbar a").forEach(link => {
-      link.onclick = () => { navbar.classList.remove("active"); navbarImg?.classList.remove("active"); };
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if(target) target.scrollIntoView({ behavior: "smooth" });
-      });
-    });
-    const homeImg = document.querySelector(".home-img");
-    if(homeImg) {
-      document.querySelector(".home").addEventListener("mousemove", (e) => {
-        const x = (e.clientX / window.innerWidth) * 20;
-        const y = (e.clientY / window.innerHeight) * 20;
-        homeImg.style.transform = `translate(${x/6}px, ${y/6}px)`;
-      });
-    }
-    const form = document.getElementById("contactForm");
-    if(form) {
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const templateParams = {
-          name: document.getElementById("nameInput").value,
-          email: document.getElementById("emailInput").value,
-          subject: document.getElementById("subjectInput").value,
-          message: document.getElementById("msgInput").value,
-          time: new Date().toLocaleString()
-        };
-        emailjs.send("service_nzxlwge", "template_17v0o3b", templateParams)
-          .then(() => { alert("✅ Message sent! I'll reach out soon."); form.reset(); })
-          .catch((err) => { alert("❌ Failed: " + err.text); });
-      });
-    }
-    const downloadBtn = document.getElementById("downloadResume");
-    if(downloadBtn) {
-      downloadBtn.addEventListener("click", () => {
-         window.open("./Resume.html", "_blank");
-      });
-    }
-  });
-
-  const yearSpan = document.getElementById("currentYear");
-  if(yearSpan) yearSpan.textContent = new Date().getFullYear();
+  window.onbeforeprint = function () {
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+  };
+  window.onafterprint = function () {
+    document.body.style.margin = '';
+    document.body.style.padding = '';
+  };
 </script>
 </body>
 </html>

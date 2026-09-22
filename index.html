@@ -100,7 +100,16 @@
       <div class="info-item"><i class="fas fa-map-marker-alt"></i> Pune, India</div>
       <div class="info-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/" target="_blank">linkedin.com/in/omkar-ingawale</a></div>
       <div class="info-item"><i class="fab fa-github"></i> <a href="https://github.com/omkaringawale21" target="_blank">github.com/omkaringawale21</a></div>
-      <button id="downloadResume" class="download-btn" style="margin-top:1rem;"><i class="fa-solid fa-download"></i> Download CV (PDF)</button>
+      
+      <!-- ========== BUTTON GROUP ========== -->
+      <div class="btn-group">
+        <a href="./Omkar_Ingawale_Resume.pdf" download="Omkar_Ingawale_Resume.pdf" class="download-btn" id="downloadResume">
+          <i class="fa-solid fa-download"></i> Download CV (PDF)
+        </a>
+        <button class="view-btn" id="viewResume">
+          <i class="fa-solid fa-eye"></i> View Resume
+        </button>
+      </div>
     </div>
     <form class="contact-form" id="contactForm">
       <input type="text" placeholder="Your Name" class="box" id="nameInput" required>
@@ -114,6 +123,261 @@
 <footer>
   <p>© <span id="currentYear"></span> Omkar Ingawale — Full Stack Developer. Built with 💛</p>
 </footer>
+
+<!-- ========== RESUME MODAL ========== -->
+<div class="resume-modal" id="resumeModal">
+  <div class="resume-modal-content">
+    <button class="resume-modal-close" id="closeResumeModal" title="Close Resume">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="resume-paper">
+      <div class="resume-inner">
+
+        <!-- LEFT PANEL -->
+        <div class="resume-left-panel">
+          <div class="resume-profile-img">
+            <img src="https://placehold.co/400x400/1e293b/f5c518?text=OMKAR" alt="Omkar Ingawale">
+          </div>
+
+          <div class="resume-contact-info">
+            <h2>Contact</h2>
+            <p><i class="fas fa-phone"></i> +91 8484015599 / 9075772072</p>
+            <p><i class="fas fa-envelope"></i> omkaringawale21@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Pune, India</p>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/omkar-ingawale-034a6b214/" target="_blank">linkedin.com/in/omkar-ingawale</a></p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/omkaringawale21" target="_blank">github.com/omkaringawale21</a></p>
+          </div>
+
+          <h2>Technical Skills</h2>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">HTML5, CSS3, SCSS, Tailwind CSS</div>
+            <div class="resume-skill-bar"><span style="width:90%"></span></div>
+          </div>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">JavaScript, TypeScript</div>
+            <div class="resume-skill-bar"><span style="width:88%"></span></div>
+          </div>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">React JS, Next JS</div>
+            <div class="resume-skill-bar"><span style="width:85%"></span></div>
+          </div>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">ASP.NET Core Web API</div>
+            <div class="resume-skill-bar"><span style="width:82%"></span></div>
+          </div>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">Node JS, Express JS</div>
+            <div class="resume-skill-bar"><span style="width:80%"></span></div>
+          </div>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">MongoDB, PostgreSQL</div>
+            <div class="resume-skill-bar"><span style="width:78%"></span></div>
+          </div>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">Material UI, Bootstrap, React Lucide</div>
+            <div class="resume-skill-bar"><span style="width:85%"></span></div>
+          </div>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">AWS (S3, EC2), Docker</div>
+            <div class="resume-skill-bar"><span style="width:70%"></span></div>
+          </div>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">JEST, Vitest, LINT Unit Testing</div>
+            <div class="resume-skill-bar"><span style="width:80%"></span></div>
+          </div>
+
+          <h2>Tools</h2>
+          <div class="resume-skill-item">
+            <div class="resume-skill-title">Postman · Jira · Git · GitHub · GitLab</div>
+            <div class="resume-skill-bar"><span style="width:88%"></span></div>
+          </div>
+
+          <h2>Certification</h2>
+          <p class="cert-item"><i class="fas fa-certificate"></i> Full Stack Web Development – Java Patil (Feb 2023)</p>
+
+          <h2>Achievements</h2>
+          <p class="cert-item"><i class="fas fa-trophy"></i> Second prize in 'Parashot Design'</p>
+          <p class="cert-item"><i class="fas fa-star"></i> Multiple client appreciations for demo presentations & production releases</p>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="resume-right-panel">
+          <div class="resume-header-name">
+            <h1>OMKAR ABHAY INGAWALE</h1>
+            <p>Full Stack Developer</p>
+          </div>
+
+          <div class="resume-tagline">
+            🔹 Detail-oriented Software Engineer skilled in front-end and full-stack development with expertise in modern web technologies, responsive UI design, backend integration, and cloud-based deployment.
+          </div>
+
+          <!-- WORK EXPERIENCE -->
+          <div class="resume-section">
+            <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+
+            <!-- Hodudata Technologies -->
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <span class="resume-job-title">Software Engineer</span>
+                <span class="resume-date">Jan 2026 – Present</span>
+              </div>
+              <div class="resume-company">Hodudata Technologies Private Limited (Atos Partner), Pune</div>
+              <ul>
+                <li><strong>Project: DMS One (Collection Finance Application)</strong> — Client: Bajaj Finance Private Limited</li>
+                <li><strong>Technology:</strong> ASP.NET Core Web API, REST APIs, Redis Cache, AES-GCM Encryption</li>
+                <li>Developed and maintained scalable RESTful APIs using ASP.NET Core Web API for loan collection and finance management processes.</li>
+                <li>Implemented customer account, loan repayment, payment tracking, and collection workflow functionalities.</li>
+                <li>Utilized Redis Cache and implemented AES-GCM encryption to all APIs to improve application performance.</li>
+              </ul>
+              <div>
+                <span class="resume-tech-badge">ASP.NET Core</span>
+                <span class="resume-tech-badge">Redis Cache</span>
+                <span class="resume-tech-badge">AES-GCM</span>
+                <span class="resume-tech-badge">REST APIs</span>
+              </div>
+            </div>
+
+            <!-- Agile Software – SiteOne Backend -->
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <span class="resume-job-title">Software Engineer (Backend)</span>
+                <span class="resume-date">Jan 2024 – Sept 2025</span>
+              </div>
+              <div class="resume-company">Agile Software, Pune — SiteOne (Real Estate Project)</div>
+              <ul>
+                <li><strong>Technology:</strong> ASP.NET Core Web API, REST APIs, Razorpay, AWS S3, PostgreSQL, JWT, Multi-Tenancy Architecture</li>
+                <li>Developed and maintained RESTful APIs using ASP.NET Core to support real estate functionalities such as user management, property listing, and payment integration.</li>
+                <li>Implemented Role-Based Access Control (RBAC) for different user types: Super Admin, Sub-Admin, Homeowner, and Subcontractor to ensure secure access to system resources.</li>
+                <li>Integrated Razorpay payment gateway to handle secure and reliable online transactions.</li>
+                <li>Architectured multi-tenancy support to allow logical separation of tenants and their associated data within the same application infrastructure.</li>
+                <li>Managed secure file storage and retrieval by integrating AWS S3 for storing user documents and property-related files.</li>
+                <li>Applied JWT-based authentication to ensure secure API access.</li>
+                <li>Collaborated closely with frontend developers to ensure seamless API consumption and consistent data handling.</li>
+              </ul>
+              <div>
+                <span class="resume-tech-badge">ASP.NET Core</span>
+                <span class="resume-tech-badge">Razorpay</span>
+                <span class="resume-tech-badge">JWT</span>
+                <span class="resume-tech-badge">PostgreSQL</span>
+                <span class="resume-tech-badge">AWS S3</span>
+                <span class="resume-tech-badge">Multi-Tenancy</span>
+              </div>
+            </div>
+
+            <!-- Agile Software – SiteOne Frontend -->
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <span class="resume-job-title">Software Engineer (Frontend)</span>
+                <span class="resume-date">Jan 2024 – Sept 2025</span>
+              </div>
+              <div class="resume-company">Agile Software, Pune — SiteOne (Real Estate Project)</div>
+              <ul>
+                <li><strong>Technology:</strong> React JS, JavaScript, HTML, SCSS, Context API, Class based components</li>
+                <li>Created reusable components to promote modularity and maintainability across the application.</li>
+                <li>Ensured responsive design for optimal user experience across various screen sizes and devices.</li>
+                <li>Managed CRUD operations (Create, Read, Update, Delete) across entities.</li>
+                <li>Integrated role-based access control (RBAC) to ensure secure and permission-based data access.</li>
+              </ul>
+              <div>
+                <span class="resume-tech-badge">React JS</span>
+                <span class="resume-tech-badge">Context API</span>
+                <span class="resume-tech-badge">SCSS</span>
+                <span class="resume-tech-badge">Class Components</span>
+              </div>
+            </div>
+
+            <!-- Agile Software – Party Track -->
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <span class="resume-job-title">Software Engineer</span>
+                <span class="resume-date">Nov 2024 – Sept 2025</span>
+              </div>
+              <div class="resume-company">Agile Software, Pune — Party Track</div>
+              <ul>
+                <li><strong>Technology:</strong> React JS, JavaScript, HTML, Tailwind CSS, Redux RTK-Query</li>
+                <li>Created reusable components to promote modularity and maintainability across the application.</li>
+                <li>Utilized RTK Query from Redux Toolkit to efficiently fetch and manage REST API calls with caching and auto-refetching capabilities.</li>
+                <li>Ensured responsive design for optimal user experience across various screen sizes and devices.</li>
+                <li>Developed corresponding test cases for each component and page to ensure reliability and functionality.</li>
+              </ul>
+              <div>
+                <span class="resume-tech-badge">React JS</span>
+                <span class="resume-tech-badge">Redux RTK Query</span>
+                <span class="resume-tech-badge">Tailwind CSS</span>
+                <span class="resume-tech-badge">Jest</span>
+              </div>
+            </div>
+
+            <!-- Agile Software – Innovativs AI/Church -->
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <span class="resume-job-title">Software Engineer</span>
+                <span class="resume-date">July 2024 – Nov 2025</span>
+              </div>
+              <div class="resume-company">Agile Software, Pune — Innovativs - AI/Church</div>
+              <ul>
+                <li><strong>Technology:</strong> React JS, JavaScript, HTML, CSS, Context API, Node JS, Express JS, PostgreSQL</li>
+                <li>Worked on the Stripe payment module to handle secure transactions and billing.</li>
+                <li>Implemented CRUD functionalities in Node.js using Express.js and Sequelize ORM.</li>
+                <li>Utilized a PostgreSQL database for efficient data storage and management.</li>
+                <li>Integrated AI functionality to enhance user experience and automate specific workflows.</li>
+                <li>Designed the project architecture to support multi-tenancy, enabling isolated environments for multiple clients.</li>
+              </ul>
+              <div>
+                <span class="resume-tech-badge">Node JS</span>
+                <span class="resume-tech-badge">Express JS</span>
+                <span class="resume-tech-badge">Stripe</span>
+                <span class="resume-tech-badge">Sequelize</span>
+                <span class="resume-tech-badge">PostgreSQL</span>
+                <span class="resume-tech-badge">React</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- EDUCATION -->
+          <div class="resume-section">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="resume-job-header">
+              <span class="resume-job-title">B.E. Mechanical Engineering</span>
+              <span class="resume-date">2015 – 2019</span>
+            </div>
+            <div style="font-size:0.85rem; color:#475569;">Bharati Vidyapeeth College of Engineering, Kolhapur | 54%</div>
+          </div>
+
+          <!-- COURSES & CERTIFICATION -->
+          <div class="resume-section">
+            <h3><i class="fas fa-certificate"></i> Courses & Certification</h3>
+            <ul style="margin-left:1.2rem;">
+              <li style="font-size:0.82rem; margin:0.4rem 0;">Certification on Full Stack Web Development by Java Patil — <strong>Feb 2023</strong></li>
+            </ul>
+          </div>
+
+          <!-- ACHIEVEMENTS -->
+          <div class="resume-section">
+            <h3><i class="fas fa-trophy"></i> Achievements</h3>
+            <ul style="margin-left:1.2rem;">
+              <li style="font-size:0.82rem; margin:0.4rem 0;">Received second prize in <strong>'Parashot Design'</strong>.</li>
+              <li style="font-size:0.82rem; margin:0.4rem 0;">Received multiple client appreciations for demo presentations and production releases.</li>
+            </ul>
+          </div>
+
+          <hr class="resume-hr">
+          <div style="font-size:0.7rem; text-align:center; color:#64748b;">
+            📄 References available on request · Open to full-time opportunities · Available for immediate joining
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PRINT BUTTON -->
+      <div class="resume-print-btn">
+        <button onclick="window.print();">
+          <i class="fas fa-file-pdf"></i> Save as PDF (Print-friendly)
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="Personal_Portfolio.js"></script>
