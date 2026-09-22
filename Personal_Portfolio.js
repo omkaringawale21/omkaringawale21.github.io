@@ -1,7 +1,6 @@
 (function() { emailjs.init("ybYie7tmzy7N_57V7"); })();
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== NAVIGATION =====
   const menuBtn = document.getElementById("menu-btn");
   const navbar = document.querySelector(".navbar");
   const navbarImg = document.querySelector(".navbar-img");
@@ -25,10 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   document.querySelectorAll(".navbar a").forEach(link => {
-    link.onclick = () => {
-      closeNav();
-      closeModal();
-    };
+    link.onclick = () => { closeNav(); closeModal(); };
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -39,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ===== HOME IMAGE PARALLAX =====
   const homeImg = document.querySelector(".home-img");
   if (homeImg) {
     document.querySelector(".home").addEventListener("mousemove", (e) => {
@@ -49,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== CONTACT FORM =====
   const form = document.getElementById("contactForm");
   if (form) {
     form.addEventListener("submit", (e) => {
@@ -67,45 +61,69 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== VIEW RESUME (opens Resume.html in new tab) =====
+  // ===== VIEW RESUME (opens modal) =====
   const viewResumeBtn = document.getElementById("viewResume");
   if (viewResumeBtn) {
     viewResumeBtn.addEventListener("click", () => {
-      window.open("./Resume.html", "_blank", "noopener,noreferrer");
+      resumeModal.classList.add("active");
+      document.body.style.overflow = "hidden";
     });
   }
 
-  // ===== DOWNLOAD PDF (real file download with fallback) =====
+  // ===== DOWNLOAD PDF (html2pdf.js — no external file needed) =====
   const downloadBtn = document.getElementById("downloadResume");
   if (downloadBtn) {
-    downloadBtn.addEventListener("click", async (e) => {
-      e.preventDefault();
-      const pdfUrl = "./Omkar_Ingawale_Resume.pdf";
-
-      try {
-        // Check if PDF exists (HEAD request)
-        const res = await fetch(pdfUrl, { method: "HEAD" });
-        if (!res.ok) throw new Error("PDF not found");
-
-        // Trigger download
-        const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = "Omkar_Ingawale_Resume.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } catch (err) {
-        console.warn("PDF not available, opening printable Resume.html instead.");
-        window.open("./Resume.html", "_blank", "noopener,noreferrer");
+    downloadBtn.addEventListener("click", () => {
+      if (typeof html2pdf === "undefined") {
+        alert("PDF library not loaded. Please refresh the page.");
+        return;
       }
+      const element = document.querySelector(".resume-paper");
+      if (!element) { alert("Resume content not found."); return; }
+
+      const originalHTML = downloadBtn.innerHTML;
+      downloadBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating...';
+      downloadBtn.disabled = true;
+
+      // Temporarily show the modal (hidden) so html2canvas can render it
+      const wasActive = resumeModal.classList.contains("active");
+      if (!wasActive) {
+        resumeModal.style.visibility = "hidden";
+        resumeModal.style.display = "block";
+      }
+
+      const opt = {
+        margin: 0,
+        filename: "Omkar_Ingawale_Resume.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, letterRendering: true, scrollY: 0 },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+      };
+
+      html2pdf().set(opt).from(element).save()
+        .then(() => {
+          if (!wasActive) {
+            resumeModal.style.visibility = "";
+            resumeModal.style.display = "";
+          }
+          downloadBtn.innerHTML = originalHTML;
+          downloadBtn.disabled = false;
+        })
+        .catch((err) => {
+          console.error("PDF generation failed:", err);
+          alert("PDF generation failed. Please use 'View Resume' → browser Print → Save as PDF.");
+          if (!wasActive) {
+            resumeModal.style.visibility = "";
+            resumeModal.style.display = "";
+          }
+          downloadBtn.innerHTML = originalHTML;
+          downloadBtn.disabled = false;
+        });
     });
   }
 
-  // ===== RESUME MODAL (kept for internal quick view if used) =====
   const closeModalBtn = document.getElementById("closeResumeModal");
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener("click", closeModal);
-  }
+  if (closeModalBtn) closeModalBtn.addEventListener("click", closeModal);
 
   if (resumeModal) {
     resumeModal.addEventListener("click", (e) => {
@@ -118,6 +136,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ===== CURRENT YEAR =====
 const yearSpan = document.getElementById("currentYear");
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
